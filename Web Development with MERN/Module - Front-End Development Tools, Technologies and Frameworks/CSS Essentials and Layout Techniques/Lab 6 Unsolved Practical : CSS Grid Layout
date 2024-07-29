@@ -1,0 +1,4 @@
+Unsolved Practical: Create an HTML document that includes a gallery section with multiple images. Use CSS Grid to style these images as follows:
+•	Display the images in a responsive 3-column grid layout.
+•	Ensure the images maintain their aspect ratio and automatically adjust their size to fill the available space in the grid.
+•	Apply equal spacing between the images.
