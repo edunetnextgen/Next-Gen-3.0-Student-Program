@@ -1,0 +1,8 @@
+Practice Question
+Ex. 2: Program that implements a grading system using a function in Python
+Objective The program takes the marks of 6 subjects using a loop, calculates the average marks using the function and determines the average grade using another function. It then displays the entered subject marks, average marks with two decimal places, and the average grade.
+>=90	Very Good
+>=80  and <90	Good
+>=60and <80	Average
+>=45 and <60	Below Average
+<45	Fail
