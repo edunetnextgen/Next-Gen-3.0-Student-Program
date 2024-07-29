@@ -1,0 +1,69 @@
+Solved Practical: Hands-on Modules and Queries
+Objective: 
+The primary goal of studying MongoDB modules and queries is to develop a comprehensive understanding of MongoDB's advanced features and to master the art of efficient data manipulation and retrieval. This knowledge is crucial for building scalable, high-performance applications using MongoDB.
+
+Problem Statement: 
+Problem Statement for MongoDB Modules and Queries
+The use of MongoDB modules and the construction of effective queries present several challenges and considerations for developers and database administrators. Here's a comprehensive problem statement:
+1.	Module Selection and Integration: 
+o	Choosing the appropriate MongoDB driver or module for different programming languages and frameworks
+o	Ensuring compatibility between the selected module version and the MongoDB server version
+o	Integrating MongoDB modules seamlessly into existing application architectures
+2.	Connection Management: 
+o	Establishing and maintaining stable connections to MongoDB servers
+o	Implementing connection pooling for efficient resource utilization
+o	Handling connection errors and implementing reconnection strategies
+3.	Query Construction Complexity: 
+o	Building complex queries that effectively filter, sort, and manipulate data
+o	Optimizing queries for performance, especially for large datasets
+o	Ensuring query correctness and preventing injection vulnerabilities
+4.	Error Handling and Debugging: 
+o	Implementing robust error handling for various query scenarios
+o	Debugging complex queries and aggregations
+o	Troubleshooting performance issues in production environments
+This problem statement encompasses the multifaceted challenges involved in working with MongoDB modules and constructing effective queries. Addressing these issues is crucial for developing robust, efficient, and scalable MongoDB-based applications.
+Procedure:
+a)	MongoDB Connection Establish with Node js
+
+Step 1: initialize your project
+npm init -y
+ 
+
+Step 2: Install Mongoose in your system using the below command.
+  npm install mongoose
+
+ 
+
+Step 3: Import the mongoose library
+To connect a Node.js application to MongoDB, we have to use a library called Mongoose.  
+const mongoose = require("mongoose");
+
+Step 4: Use the Mongoose connect method to establish the connection
+//Connectivity code
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose'); 
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/developers');
+// Check connection
+const db = mongoose.connection;
+db.on('error', (err) => {
+  console.error(err);
+});
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+app.get('/getUsers',(req,res)=>{
+    res.send("connected with mongdo")
+})
+app.listen(3003,()=>{
+    console.log("it is listening")
+})
+ 
+
+
+
+ 
+
+Result:
+MongoDB, as a flexible and powerful NoSQL database system, offers a comprehensive set of modules and query capabilities that cater to diverse data management needs.
