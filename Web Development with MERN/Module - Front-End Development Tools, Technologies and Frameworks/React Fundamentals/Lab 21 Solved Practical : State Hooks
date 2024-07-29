@@ -1,0 +1,40 @@
+Solved Practical: create a Functional component and use the state to calculate the interaction happened to a button 
+Objective:  
+The objective of this lab is to implement the hooks in a React project This includes creating of the React project and using state hooks in components and understanding the working of state in functional components using the Hooks method.
+Problem Statement:
+Create a button element and an element to display the number of counts of the button is clicked.
+Performing the Practical: 
+1.	Open VScode
+2.	Create a Functional component inside the src folder.
+3.	Import react state hooks and the Functional component  sniped.
+4.	Call the state hooks
+5.	Add the following code by editing the sniped.
+
+import React, { useState } from 'react';
+function Statehook() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+export default Statehook
+
+6.	Go to app.js file and add your component as shown:
+
+import { useState } from 'react'
+import './App.css'
+import Statehook from './components/Hooks/Statehook';
+function App() {
+  return (
+    <>
+<Statehook/>
+    </>
+  )
+}
+export default App 
