@@ -1,0 +1,135 @@
+Solved Practical: Hands-on MongoDB Basics and Operators
+
+Objective: 
+The primary objective of learning MongoDB basic commands and operators is to equip developers and database administrators with the essential skills to interact with MongoDB databases effectively. This knowledge forms the foundation for building and managing robust, scalable NoSQL database systems.
+Problem Statement: 
+The use of MongoDB basic commands and operators presents several challenges for developers and database administrators, especially those transitioning from traditional relational databases. This problem statement outlines the key issues:
+1.	Syntax Unfamiliarity:
+Many users struggle with MongoDB's JavaScript-like syntax, which differs significantly from SQL, leading to a steep learning curve.
+2.	Document-Oriented Paradigm:
+Understanding and effectively working with MongoDB's document-oriented structure, as opposed to table-based relational models, can be challenging for those accustomed to traditional databases.
+3.	Query Complexity:
+Constructing complex queries using MongoDB's operators and aggregation framework can be daunting, especially for operations that would be straightforward in SQL.
+4.	Data Manipulation:
+Grasping the nuances of inserting, updating, and deleting data in a document-based system, particularly when dealing with nested documents and arrays.
+5.	Operator Overload:
+MongoDB has a wide array of operators for various purposes (query, update, aggregation), which can be overwhelming to learn and apply correctly.
+6.	Scalability Understanding: 
+Grasping concepts related to MongoDB's scalability features like sharding and replication, and how they affect basic operations. 
+7.	Data Type Handling: 
+Working with MongoDB's flexible data types and understanding their implications in queries and data manipulation. 
+8.	Error Handling and Debugging: 
+Interpreting and resolving errors in MongoDB operations, which can be less intuitive compared to SQL databases.
+Procedure: 
+A) Basic Commands:
+1.	MongoDB Help
+To get a list of commands, type db.help() in MongoDB client. This will give you a list of commands as shown in the following screenshot.
+db.help
+
+ 
+
+2.	Show All Databases
+          Use the below command to get the list of all databases.
+          show dbs
+
+ 
+
+3.	Create a new database
+To create a new database execute the following command.
+use DATABASE_NAME
+ 
+
+4.	Know your current selected database
+To know your current working/selected database execute the following command db
+
+ 
+
+5.	Create a collection
+To create the new collection execute the following commands
+db.createCollection(name)
+
+ 
+
+6.	To check the collections list
+To get the list of collections created execute the following command
+7.	Show collections
+ 
+
+8.	Insert document in the collection
+7.1. Insert single document:
+>db.COLLECTION_NAME.insertOne(document)
+To insert single document in selected collection execute the following command           
+
+7.2. Insert Multiple documents:
+                    db.COLLECTION_NAME.insertMany(document)
+To insert multiple documents in the selected collection execute the following                      
+ 
+
+9.	Get collection document
+To get the list of documents in the collection execute the following command
+>db.COLLECTION_NAME.find()
+
+                             
+
+10.	Update document
+To update the document in the collection execute the following comman
+     >db.COLLECTION_NAME.updateOne(SELECTION_CRITERIA,UPDATED_DATA)
+
+
+ 
+
+
+11.	Delete document
+To delete document in selected collection execute the following command
+
+>db.COLLECTION_NAME.remove(DELLETION_CRITTERIA)
+
+        
+
+12.	Drop collection
+To drop the selected collection execute the following command
+db.COLLECTION_NAME.drop()
+
+      
+
+13.	Drop database
+To drop the database execute the following command, this will drop the selected database
+db.dropDatabase()
+
+ 
+
+B) Operators:
+Comparison
+The following operators can be used in queries to compare values:
+1.	$eq: Values are equal
+ 
+
+2.	$ne: Values are not equal
+ 
+
+3.	$gt: Value is greater than another value
+ 
+
+4.	$gte: Value is greater than or equal to another value
+  
+5.	$lt: Value is less than another value
+   
+
+6.	$lte: Value is less than or equal to another value
+  
+7.	$in: Value is matched within an array
+ \
+Logical Operators
+The following operators can logically compare multiple queries.
+
+1.	$and: Returns documents where both queries match
+ 
+2.	$or: Returns documents where either query matches
+ 
+3.	$nor: Returns documents where both queries fail to match
+ 
+
+4.	$not: Returns documents where the query does not match
+ 
+Result:
+MongoDB provides a powerful and flexible set of commands and operators for managing and querying data.
