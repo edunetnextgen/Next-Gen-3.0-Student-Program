@@ -1,0 +1,5 @@
+Unsolved Practical: Create a JavaScript program that dynamically updates and displays product information on a webpage using DOM manipulation. The program should do the following:
+•	Initialize an array with at least 5 product names.
+•	Use a loop to dynamically create <li> elements for each product name.
+•	Append these <li> elements to an existing <ul> element on the webpage designated for product listing.
+•	Calculate and display the total number of products on the webpage
