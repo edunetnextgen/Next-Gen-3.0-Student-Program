@@ -1,0 +1,85 @@
+Objective
+Learn how to create and use simple modules in Node.js by building a project that utilizes custom modules for mathematical and string operations.
+Problem Statement: 
+Create a Node.js project using custom modules for performing mathematical and string operations.
+Prerequisites
+•	Basic understanding of JavaScript.
+•	Node.js installed on your machine.
+Steps:
+Step 1: Set Up the Project
+1.	Create a new project directory:
+Open your terminal and create a new directory for your project. Navigate into this directory.
+>>> mkdir simple-node-modules
+>>>cd simple-node-modules
+2.	Initialize a Node.js project: 
+Run npm init -y to initialize a new Node.js project. This will create a package.json file in your project directory.
+>>> npm init -y
+Step 2: Create Modules
+1.	Create math.js: In the project directory, create a file named math.js with the following content:
+// math.js
+function add(a, b) {
+    return a + b;
+}
+function subtract(a, b) {
+    return a - b;
+}
+module.exports = {
+    add,
+    subtract
+};
+Explanation:
+•	add(a, b): Adds two numbers.
+•	subtract(a, b): Subtracts the second number from the first.
+•	module.exports: Exports the functions so they can be used in other files.
+Step 3: Create strings.js: 
+In the project directory, create a file named strings.js with the following content:
+// strings.js
+function concatenate(str1, str2) {
+    return str1 + ' ' + str2;
+}
+function toUpperCase(str) {
+    return str.toUpperCase();
+}
+module.exports = {
+    concatenate,
+    toUpperCase
+};
+Explanation:
+•	concatenate(str1, str2): Concatenates two strings with a space in between.
+•	toUpperCase(str): Converts a string to uppercase.
+•	module.exports: Exports the functions so they can be used in other files.
+
+Step 4: Create the Main Application File
+1.	Create app.js: In the project directory, create a file named app.js with the following content:
+// app.js
+const math = require('./math');
+const strings = require('./strings');
+
+// Using math module
+const sum = math.add(5, 3);
+const difference = math.subtract(9, 4);
+console.log(`Sum: ${sum}`);
+console.log(`Difference: ${difference}`);
+
+// Using strings module
+const concatenated = strings.concatenate('Hello', 'World');
+const uppercased = strings.toUpperCase('hello world');
+console.log(`Concatenated: ${concatenated}`);
+console.log(`Uppercased: ${uppercased}`);
+Explanation:
+•	require('./math'): Imports the math module.
+•	require('./strings'): Imports the strings module.
+•	Demonstrates usage of the imported functions and logs the results to the console.
+Step 5: Run the Application
+1.	Run the application: In the terminal, run the following command to execute app.js:
+>>> node app.js
+Expected Output:
+Sum: 8
+Difference: 5
+Concatenated: Hello World
+Uppercased: HELLO WORLD
+ 
+Summary
+•	You created a Node.js project and set up a package.json file.
+•	You created and exported functions in two separate modules (math.js and strings.js).
+•	You imported these modules in app.js and used their functions to perform operations and log results to the console.
