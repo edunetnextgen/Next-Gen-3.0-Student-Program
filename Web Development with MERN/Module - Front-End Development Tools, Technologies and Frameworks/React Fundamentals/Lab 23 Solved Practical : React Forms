@@ -1,0 +1,65 @@
+Solved Practical: create a form and store the data in local storage on the browser
+Objective:  
+The objective of this lab is to implement the form and handle the form to understand how we can collect the data entered by the user using hooks
+Problem Statement:  
+create a form and store the value, should collect the data entered by the user
+Prerequisites: 
+1.	Basic understanding of the JavaScript programming language.
+Procedure: 
+Setting up the Environment: 
+1.	Ensure that Node JS is installed on your computer. 
+2.	Create React js project – npm create vite
+You can download it from the official Node JS website 
+Performing the Practical: 
+1.	Open VScode
+2.	Create a Functional component inside the src folder.
+3.	 Import react state hooks and the Functional component  sniped.
+4.	 Call the state hooks
+5.	 Add the following code by editing the sniped.
+
+import React, { useState } from 'react';
+
+const FormComponents = () => {
+  const [inputValue, setInputValue] = useState('');
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+    localStorage.setItem('inputValue', event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    alert('A name was submitted: ' + inputValue);
+    event.preventDefault();
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name : 
+            <input type="text" value={inputValue} onChange={handleChange} />
+        </label>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+
+      <h1>Hello, {inputValue}!</h1>
+    </div>
+  );
+};
+
+export default FormComponents;
+
+6.	Go to app.js file and add your component as shown:
+
+import { useState } from 'react'
+import './App.css'
+import FormComponents from './components/ FormComponents';
+
+function App() {
+  return (
+    <>
+     <FormComponents/>
+    </>
+  )
+}
+export default App
