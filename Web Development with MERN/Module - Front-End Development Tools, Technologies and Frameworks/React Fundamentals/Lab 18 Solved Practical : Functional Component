@@ -1,0 +1,38 @@
+Solved Practical: Functional Component
+Objective:  
+The objective of this lab is to implement the component in a react project This includes creating of the React project and Functional component and understanding the basics of Functional components.
+Problem Statement:
+Create a Functional component and display some text on React JS 
+Performing the Practical: 
+1.	Open VScode
+2.	Create React js project – npm create vite
+3.	Create a folder called components inside the src folder.
+4.	Create a file called Function-component.jsx inside the components folder.
+5.	Import react and the Functional component sniped.
+6.	Add the following code by editing the sniped.
+
+import React from 'react'
+function Functionalcomponent() {
+  return (
+    <div>
+       <h1>Hello world</h1>
+       <p>i am Functional component</p>
+    </div>
+  )
+}
+export default Functionalcomponent
+7.	Go to app.js file and add your component as shown:
+import { useState } from 'react'
+import Functionalcomponent from './components/ Functionalcomponent';
+import './App.css'
+
+function App() {
+  return (
+    <>
+    <Functionalcomponent/>
+    </>
+  )
+}
+
+export default App
+
