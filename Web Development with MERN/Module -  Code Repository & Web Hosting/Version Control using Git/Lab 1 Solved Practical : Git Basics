@@ -1,0 +1,112 @@
+Solved Practical: Hands-on Git basics and advanced functionalities
+Objective: 
+•	To understand the fundamentals of version control using Git.
+•	To learn how to create repositories, track changes, and collaborate using Git.
+•	To explore advanced Git functionalities such as branching, merging, and resolving conflicts.
+Problem Statement: 
+•	Develop a workflow for a team project where multiple developers collaborate on a codebase using Git.
+•	Resolve merge conflicts that arise from concurrent modifications to the same file.
+•	Implement branching strategies to manage feature development and releases effectively.
+Procedure:
+1.	Setting up Git
+Step 1: Install Git
+•	Download Git from git-scm.com and install it according to your operating system.
+•	Verify the installation by opening a terminal (Command Prompt on Windows or Terminal on macOS/Linux) and typing:
+git –version
+•	Ensure Git is correctly installed and accessible from the command line.
+
+Step 2: Configure Git
+•	Configure your username and email address (use the same email as your GitLab or GitHub account if applicable):
+git config --global user.name "Your Name"
+git config --global user.email your.email@example.com
+
+Step 3: Optional - Set Up SSH Keys (for GitHub/GitLab)
+•	Generate a new SSH key (skip if already set up):
+ssh-keygen -t rsa -b 4096 -C your.email@example.com
+•	Add your SSH key to the SSH agent:
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+•	Copy the SSH key to your clipboard:
+pbcopy < ~/.ssh/id_rsa.pub   (on macOS)
+clip < ~/.ssh/id_rsa.pub     (on Windows)
+•	Add the SSH key to your GitHub or GitLab account settings.
+
+2.	Basic Git Operations:
+Step 1: Initialize a Git Repository
+•	Create a new directory for your project:
+mkdir my-project
+cd my-project
+•	Initialize a Git repository:
+git init
+Step 2: Stage and Commit Changes
+•	Create or edit files in your project directory.
+•	Stage changes for commit:
+git add filename.ext      (stage a specific file)
+git add .                 (stage all changes)
+
+•	Commit changes:
+git commit -m "Commit message"
+Step 3: View Commit History
+•	View commit history:	
+git log
+Step 4: Ignore Files using `.gitignore`
+•	Create a `.gitignore` file in the root of your repository:
+touch .gitignore
+•	Edit `.gitignore` to specify files and directories to ignore (e.g., `node_modules/`, `.DS_Store`).
+3.	Collaborative Workflows:
+Step 1: Clone a Remote Repository
+•	Clone an existing repository from GitHub (replace <repository-url> with the actual repository URL):
+git clone <repository-url>
+Step 2: Pull and Push Changes
+•	Pull changes from the remote repository:
+git pull origin main   (or specify branch)
+•	Push changes to the remote repository:
+git push origin main   (or specify branch)
+Step 3: Fork a Repository and Create a Pull Request (PR)
+•	Fork a repository on GitHub or GitLab.
+•	Clone the forked repository to your local machine.
+•	Create a new branch for your feature:
+git checkout -b feature-branch
+•	Make changes, stage, commit, and push them to your forked repository.
+•	Create a pull request on the original repository for your changes.
+4.	Branching and Merging:
+Step 1: Create and Switch Branches
+•	Create a new branch:
+git checkout -b new-branch
+
+
+•	Switch to an existing branch:
+git checkout existing-branch
+Step 2: Merge Branches
+•	Merge changes from one branch into another:
+git checkout receiving-branch
+git merge feature-branch
+Step 3: Resolve Merge Conflicts
+•	If conflicts arise, Git will indicate conflicted files.
+•	Open conflicted files, resolve conflicts, and stage changes:
+git add conflicted-file.ext
+•	Commit the merge:
+git commit -m "Merge branch 'feature-branch' into main"
+
+5.	Advanced Git Functionalities:
+Step 1: Work with Tags for Versioning
+•	Create a tag for a specific commit:
+git tag -a v1.0 -m "Version 1.0"
+•	List all tags:
+git tag
+Step 2: Use Git Bisect for Binary Search Debugging
+•	Start the bisect process:
+git bisect start
+•	Mark commits as good or bad until you find the faulty commit:
+git bisect good <commit>
+git bisect bad <commit>
+•	Finish the bisect process:
+git bisect reset
+Step 3: Apply Git Stash for Temporary Changes
+•	Stash changes:
+git stash save "Work in progress"
+
+•	Apply stashed changes:
+git stash apply
+•	Drop stashed changes:
+git stash drop
