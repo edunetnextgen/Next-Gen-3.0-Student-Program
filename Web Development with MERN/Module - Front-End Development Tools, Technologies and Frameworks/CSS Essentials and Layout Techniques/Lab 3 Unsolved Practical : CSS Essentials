@@ -1,0 +1,3 @@
+Unsolved Practical:  Create an HTML document that includes a list of menu items. Use CSS selectors to style the list items differently based on their availability:
+•	Apply a margin to all list items.
+•	Apply an opacity to list items with the class "unavailable".
