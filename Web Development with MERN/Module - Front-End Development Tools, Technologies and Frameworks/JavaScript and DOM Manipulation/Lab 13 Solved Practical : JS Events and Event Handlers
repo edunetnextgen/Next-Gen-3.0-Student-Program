@@ -1,0 +1,51 @@
+Objective: 
+To understand and implement JavaScript events and event handlers, including click, mouseover, mouseout, and page load events.
+Problem Statement: 
+Write an HTML and JavaScript program that demonstrates the use of JavaScript events and event handlers. The program should include:
+•	A click event handler that displays an alert when a heading is clicked.
+•	mouseover and mouseout event handlers that display an alert and log a message to the console when the mouse hovers over and leaves a button, respectively.
+•	A window.onload event handler that logs a message to the console when the page is fully loaded.
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events and Event Handlers</title>
+</head>
+<body>
+
+    <h1 id="pageTitle">Click on Me!</h1>
+    <button id="myButton">Hover over Me </button>
+
+    <script>
+        // Event handler functions
+        function handleClick() {
+            alert("You clicked!");
+        }
+        function handleMouseOver() {
+            alert("Mouse over!");
+        }
+        function handleMouseOut() {
+            console.log("Mouse out of the button!");
+        }
+
+        function handlePageLoad() {
+            console.log("Page is fully loaded.");
+        }
+
+
+
+        // Get elements and attach event listeners
+        let pageTitle = document.getElementById("pageTitle");
+        let button = document.getElementById("myButton");
+        pageTitle.addEventListener("click", handleClick);
+        button.addEventListener("mouseover", handleMouseOver);
+        button.addEventListener("mouseout", handleMouseOut);
+        // Window onload event
+        window.onload = handlePageLoad;
+    </script>
+</body>
+</html>
+3.	Save the file with a .html extension
+4.	Open the saved HTML file in your web browser to view the output. To see the console output, open the browser's developer tools (by pressing F12 or right-clicking on the page and selecting "Inspect" or "Inspect Element"), and navigate to the "Console" tab.
