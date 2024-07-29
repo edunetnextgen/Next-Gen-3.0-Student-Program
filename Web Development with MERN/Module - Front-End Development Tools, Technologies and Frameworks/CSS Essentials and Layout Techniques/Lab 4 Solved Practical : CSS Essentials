@@ -1,0 +1,51 @@
+Topic: CSS Essentials
+Solved Practical: Box Model and Positioning
+Objective: The objective of this lab is to understand and implement the CSS box model and positioning techniques. This includes defining the content area, padding, border, and margin of an element, as well as applying different positioning methods to position elements within the document.
+Problem Statement: Write an HTML and CSS program that demonstrates the CSS box model and positioning properties. The program should include a container element styled with the box model properties and a nested element positioned using absolute positioning relative to the container.
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model and Positioning Example</title>
+    <style>
+
+        /* Box Model Example */
+        .box {
+            width: 200px; /* Content width */
+            height: 100px; /* Content height */
+            padding: 20px; /* Padding */
+            border: 5px solid red; /* Border */
+            margin: 30px; /* Margin */
+            background-color: lightcoral; /* Background color for visibility */
+            position: relative; /* Relative positioning */
+        }
+        /* Positioning Example */
+        .positioned-element {
+            width: 100px;
+            height: 50px;
+            background-color: lightgreen;
+            padding: 10px;
+            border: 2px solid #000;
+            position: absolute; /* Absolute positioning */
+            top: 40px; /* 20px from the top of the relatively positioned .box */
+            left: 20px; /* 20px from the left of the relatively positioned .box */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a box model example.
+        <div class="positioned-element">
+            Positioned Element
+        </div>
+    </div>
+</body>
+</html>
+3.	Save the file with a .html extension 
+4.	Open the saved HTML file in your web browser to view the styled document.
