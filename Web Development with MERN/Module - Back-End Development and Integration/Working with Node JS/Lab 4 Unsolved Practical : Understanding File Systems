@@ -1,0 +1,4 @@
+Unsolved Practical: Create a Node.js script on Error Handling and File Deletion to solve the following questions
+1.	Attempts to read the content of a file named data.txt.
+2.	Handles any errors encountered during file reading by logging an appropriate message.
+3.	Deletes the file data.txt if it exists, confirming deletion with a success message
