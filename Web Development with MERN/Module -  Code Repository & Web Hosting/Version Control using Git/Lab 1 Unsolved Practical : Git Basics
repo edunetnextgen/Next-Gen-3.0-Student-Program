@@ -1,0 +1,5 @@
+You are collaborating on a project and need to make a commit with a detailed message and push it to a remote repository. Describe the sequence of Git commands you would use to:
+
+Stage all the changes in your working directory.
+Commit the changes with the message "Fix issue #123: Corrected the login bug".
+Push the commit to the remote repository named origin on the branch feature/login.
