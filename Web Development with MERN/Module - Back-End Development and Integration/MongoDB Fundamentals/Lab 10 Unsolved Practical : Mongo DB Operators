@@ -1,0 +1,20 @@
+Practical Exercise: Advanced Query and Update Operations
+Task: Manage a MongoDB database for a library system, focusing on query and update operations using various MongoDB operators.
+
+Instructions:
+
+Setup the Database:
+Create a database named library.
+Create a collection named books.
+Query Operations:
+
+Write a query to find all books published before the year 1950.
+Write a query to find all books that belong to both the "Fiction" and "Dystopian" genres.
+Write a query to find all books where the number of copies is greater than 3 and less than 6.
+Write a query to find all books where the author's name includes the word "Scott" (use a regular expression).
+Update Operations:
+
+Increase the number of copies of "Moby Dick" by 3.
+Add a new genre "American Literature" to "The Great Gatsby".
+Remove the genre "Adventure" from "Moby Dick".
+Set the number of copies to 10 for all books where the genre includes "Classic".
