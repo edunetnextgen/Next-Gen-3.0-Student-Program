@@ -1,0 +1,74 @@
+Solved Practical: Create a class component and use the state to target the form input value and display the value on the screen
+Objective:  
+The objective of this lab is to implement the class component in a React project This includes creating of the React project and using state in components component to the parent component to change an element and understanding how to add events and handle the changes on a webpage
+
+
+Problem Statement: 
+Create a React JS project using the class component and add state to target the form input
+Procedure: 
+Setting up the Environment: 
+1.	Ensure that Node JS is installed on your computer. 
+You can download it from the official Node JS website 
+Performing the Practical: 
+1.	Open VScode
+2.	Create React js project – npm create vite
+3.	Create a Class component inside the src folder.
+4.	Import react and the class component sniped.
+5.	Add the following code by editing the sniped.
+
+import React, { Component } from 'react';
+
+class FormComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: ''
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      inputValue: event.target.value
+    });
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.inputValue);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Name:
+            <input type="text" value={this.state.inputValue} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        <h1>Hello, {this.state.inputValue}!</h1>
+      </div>
+    );
+  }
+}
+
+export default FormComponent;
+
+6.	Go to app.js file and add your component as shown:
+
+import { useState } from 'react'
+import './App.css'
+import FormComponent from './components /FormComponent';
+
+function App() {
+  return (
+    <>
+     <FormComponent/>
+    </>
+  )
+}
+export default App
