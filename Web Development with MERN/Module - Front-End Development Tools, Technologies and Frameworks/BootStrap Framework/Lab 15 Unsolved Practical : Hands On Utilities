@@ -1,0 +1,6 @@
+Creating a Complex Grid Layout
+Task: Create a responsive grid layout using Bootstrap's grid system. The layout should have the following structure:
+
+A full-width header.
+A two-column layout beneath the header where the left column is twice as wide as the right column.
+Below the two-column layout, create a three-column layout where the middle column is centered and the left and right columns take up the remaining space equally.
