@@ -1,0 +1,4 @@
+Unsolved Practical: Create a JavaScript program that processes an array of student scores. The program should do the following:
+•	Initialize an array with 10 predefined student scores.
+•	Use functions to calculate the average score and find the highest score.
+•	Log the scores, the average score, and the highest score to the console
