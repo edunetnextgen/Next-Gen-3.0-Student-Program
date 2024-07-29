@@ -1,0 +1,12 @@
+Ex. 1: Python program to read a number and check whether it is positive, negative, or zero
+Program
+num = int(input("Enter a number: "))
+if num > 0:
+    print("The number is positive.")
+elif num < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")
+Output
+Enter a number: 5
+The number is positive.
