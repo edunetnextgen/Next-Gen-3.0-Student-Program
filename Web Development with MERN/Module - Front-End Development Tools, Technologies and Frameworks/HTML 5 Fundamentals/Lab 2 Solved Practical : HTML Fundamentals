@@ -1,0 +1,189 @@
+Solved Practical - Hands-on HTML5 features (Multimedia, Semantic Elements, Canvas Elements, etc)
+
+Objective:
+The objective of this experiment is to create a sophisticated HTML5 webpage that showcases a range of advanced HTML5 features including multimedia integration, semantic elements, and interactive canvas graphics.This experiment aims to serve as a comprehensive example of modern web development practices using advanced HTML5 features.
+
+Problem Statement:
+
+Implementing basic on HTML5 features
+
+Procedure:
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta 
+      name="description" 
+     content="An advanced HTML5 example demonstrating 
+     multimedia, semantic elements, canvas, and more." > 
+    <title>Advanced HTML5 Features</title> 
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+
+            margin-bottom: 20px;
+        }
+        figure {
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form fieldset {
+            border: none;
+        }
+        form label, form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head> 
+<body> 
+    <!-- Header Section --> 
+    <header> 
+        <nav> 
+            <ul> 
+                <li><a href="#home" aria-label="Home">Home</a></li> 
+                <li><a href="#about" aria-label="About">About</a></li> 
+                <li><a href="#gallery" aria-label="Gallery">Gallery</a></li> 
+                <li><a href="#contact" aria-label="Contact">Contact</a></li> 
+            </ul> 
+        </nav> 
+    </header>
+    <!-- Main Content --> 
+    <main> 
+        <section id="home"> 
+            <h1>Welcome to Advanced HTML5 Features</h1> 
+            <p>This page demonstrates various advanced HTML5 features including
+              multimedia, semantic elements, canvas, and more. </p> 
+            <figure> 
+                <img src="images/advanced-html5.jpg" alt="Advanced HTML5 Image"
+                    width="600" height="400"> 
+<figcaption>Explore the advanced features of HTML5</figcaption> 
+            </figure> 
+        </section> 
+        <section id="about"> 
+            <h2>About Us</h2> 
+            <p>We provide tutorials and resources on modern web development
+               techniques and HTML5 features.</p> 
+        </section>
+        <section id="gallery"> 
+            <h2>Gallery</h2> 
+            <article> 
+                <h3>HTML5 Canvas Example</h3> 
+                <canvas id="myCanvas" width="600" height="400"></canvas> 
+                <script> 
+                    const canvas = document.getElementById('myCanvas'); 
+                    const ctx = canvas.getContext('2d'); 
+                    ctx.fillStyle = 'green'; 
+                    ctx.fillRect(10, 10, 150, 100); 
+                    ctx.fillStyle = 'blue'; 
+                    ctx.fillRect(200, 50, 150, 100); 
+                    ctx.fillStyle = 'red'; 
+                    ctx.fillRect(100, 150, 150, 100); 
+                </script> 
+            </article> 
+            <article> 
+                <h3>Embedded Video</h3> 
+
+                <video controls width="600"> 
+                    <source src="videos/sample.mp4" type="video/mp4"> 
+                    <source src="videos/sample.ogg" type="video/ogg"> 
+                    Your browser does not support the video tag. 
+                </video> 
+            </article> 
+        </section> 
+        <section id="contact"> 
+            <h2>Contact Us</h2> 
+            <form action="/submit-form" method="POST"> 
+                <fieldset> 
+                    <legend>Contact Information</legend> 
+                    <label for="name">Name:</label> 
+                    <input type="text" id="name" name="name" required> 
+                    <label for="email">Email:</label> 
+                    <input type="email" id="email" name="email" required> 
+                    <label for="message">Message:</label> 
+                    <textarea id="message" name="message" rows="4" required></textarea> 
+                    <button type="submit">Submit</button> 
+                </fieldset> 
+            </form> 
+        </section> 
+    </main> 
+   <!-- Footer Section --> 
+    <footer> 
+        <address> 
+<p>Contact us at 
+             <a href="mailto:info@advancedhtml5.com">info@advancedhtml5.com</a>
+</p> 
+        </address> 
+        <p>&copy; 2024 Advanced HTML5 Features. All rights reserved.</p> 
+    </footer> 
+<!--Embedded youtube video --> 
+    <section id="video"> 
+        <h2>Watch Our Introduction Video</h2> 
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+          allowfullscreen>
+</iframe> 
+    </section> 
+    <!-- JavaScript --> 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => { e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+            });
+        });
+    </script> 
+</body> 
+</html>
