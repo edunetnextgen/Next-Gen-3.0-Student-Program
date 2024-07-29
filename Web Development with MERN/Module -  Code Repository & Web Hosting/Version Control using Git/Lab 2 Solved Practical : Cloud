@@ -1,0 +1,39 @@
+Solved Practical: Hands-on experiments of integration of Git and Cloud
+
+
+
+Objective: 
+This lab aims to gain practical experience in integrating Git version control with Render cloud deployment, enabling efficient development workflows and continuous deployment practices. 
+Problem Statement: 
+•	In today's rapidly evolving software development landscape, developers need to seamlessly integrate version control systems with cloud deployment platforms. This integration is crucial for implementing efficient continuous integration and deployment (CI/CD) pipelines, ensuring rapid and reliable software delivery. However, many developers, especially those new to DevOps practices, face challenges in effectively bridging the gap between local development environments and cloud hosting services.
+•	The primary problem this hands-on experiment aims to address is the lack of practical experience and understanding in integrating Git, a widely used version control system, with Render, an emerging cloud platform. This integration is essential for modern software development workflows but often presents a steep learning curve. 
+Specific challenges include:
+•	Version Control Proficiency
+•	Cloud Platform Familiarity
+•	Automated Deployment Workflows
+•	Environment Management
+•	Security Concerns
+•	Scalability and Performance
+Procedure:
+•	Link your GitHub account to Render to easily deploy apps and sites from any repository you have access to. Render will automatically redeploy your project every time you push changes to your linked branch (you can disable this feature if needed). Additionally, 
+•	Render can create a preview instance of your project for every pull request you open, making it easy to review and validate any changes.
+Step 1:  Before we begin, make sure you have an account with Render and have your React app ready to deploy. 
+If you haven’t created an account yet, you can sign up for free at https://render.com. 
+
+
+
+
+
+
+
+
+Step 2:  You can either sign up by supplying your email and a password or using single sign on with Google or GitHub account. 
+After signing up you’ll be redirected to your dashboard 
+
+
+
+
+
+
+Result:
+You’ve successfully linked your GitHub account! Whenever you create a new service, click the Connect button for whichever repo you want to use for that service. Then complete the remainder of the service creation flow.
