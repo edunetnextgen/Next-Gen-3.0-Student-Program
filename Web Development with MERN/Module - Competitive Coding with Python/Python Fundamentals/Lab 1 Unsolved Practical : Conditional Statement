@@ -1,0 +1,9 @@
+Ex. 2: Python program to determine the grade based on the percentage score
+Objective
+The objective of this program is to determine the grade of the student based on percentage score based on the following condition:
+>=90	Very Good
+>=80  and <90	Good
+>=60and <80	Average
+>=45 and <60	Below Average
+<45	Fail
+<45	Fail
