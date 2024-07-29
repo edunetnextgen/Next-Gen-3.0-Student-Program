@@ -1,0 +1,57 @@
+Objective: 
+To understand and implement JavaScript functions and array operations, including function declarations, function expressions, and various array methods.
+Problem Statement: 
+Write an HTML and JavaScript program that demonstrates the use of JavaScript functions and arrays. The program should include:
+•	A function declaration to greet a person by name.
+•	A function expression to calculate the square of a number.
+•	Array operations, including accessing elements, iterating over an array, and using array methods 
+
+
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions and Arrays</title>
+</head>
+<body>
+    <script>
+        // Function declaration
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+
+        // Function expression
+        const square = function(number) {
+            return number * number;
+        };
+
+        // Testing functions
+        console.log(greet("Alice"));
+        console.log("Square of 4:", square(4));
+
+        // Array operations
+        let fruits = ["Apple", "Banana", "Cherry"];
+
+        // Accessing elements
+        console.log("First fruit:", fruits[0]);
+        console.log("Second fruit:", fruits[1]);
+
+        // Iterating over an array
+        console.log("Fruits list:");
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        // Array methods
+        fruits.push("Kiwi", "Lemon");
+        console.log("Fruits after push:", fruits);
+
+        let fruitIndex = fruits.indexOf("Banana");
+        console.log("Index of Banana:", fruitIndex);
+    </script>
+</body>
+</html>
+3.	Save the file with a .html extension
+4.	Open the saved HTML file in your web browser to view the output. To see the console output, open the browser's developer tools (by pressing F12 or right-clicking on the page and selecting "Inspect" or "Inspect Element"), and navigate to the "Console" tab.
