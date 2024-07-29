@@ -1,0 +1,3 @@
+Unsolved Practical: Create an HTML document that includes a section with multiple card elements representing different articles. Use CSS to style these cards as follows:
+•	Apply padding, margin, border, and border-radius to all card elements.
+•	Ensure that the card elements have a fixed width of 300 pixels and are horizontally centered within the viewport.
