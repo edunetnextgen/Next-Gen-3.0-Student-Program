@@ -1,0 +1,74 @@
+Solved Practical: Hands-on for Pages, Routing, Styling, and Data Fetching in Next.js Using Tailwind CSS
+Objective:
+The objective of this lab is to understand and implement pages, routing, styling, and data fetching in a Next.js application using Tailwind CSS. This includes creating multiple pages, navigating between them, applying styles with Tailwind CSS, and fetching data from an API.
+Problem Statement:
+Write a Next.js program that demonstrates the creation of multiple pages with navigation, styling using Tailwind CSS, and data fetching from JSONPlaceholder.
+Procedure:
+1.	Create a Next.js Application:
+ 
+2.	This will prompt you to answer a few questions.
+3.	  
+            According to your requirement you can choose the options.
+4.	cd my-app (i.e., respective folder names)
+5.	Creating Multiple Pages with Navigation
+•	Create a New Page - About Page:
+•	In your project directory, navigate to the pages folder.
+•	Create a new file named about.js.
+•	Add the following code to about.js
+  export default function About() {
+  return (
+    <div className="text-center mt-12">
+      <h1 className="text-3xl text-blue-600">About Page</h1>
+      <p className="text-gray-600">This is the about page of our Next.js 		   application.</p>
+    </div>
+  );
+} 
+6.	Update the Home Page with Navigation Links:
+•	Open pages/index.js.
+•	Replace the existing code with the following code to add navigation links to the home page:
+import Link from 'next/link';
+export default function Home() {
+  return (
+    <div className="text-center mt-12">
+      <h1 className="text-3xl text-blue-600">Home Page</h1> <nav>
+        <Link href="/about" className="text-xl text-gray-600 mx-4">
+          About </Link>
+        <Link href="/posts" className="text-xl text-gray-600 mx-4">
+          Posts
+        </Link> </nav> </div>
+  );  
+}
+7.	Data Fetching from JSONPlaceholder
+•	Create a New Page - Posts Page:
+•	In the pages directory, create a new file named posts.js.
+•	Add the following code to fetch and display data from JSONPlaceholder:
+   export async function getStaticProps() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts = await res.json();
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+export default function Posts({ posts }) {
+  return (
+    <div className="text-center mt-12">
+      <h1 className="text-3xl text-blue-600">Posts Page</h1>
+      <ul className="list-none p-0">
+        {posts.map(post => (
+          <li key={post.id} className="my-4">
+            <h2 className="text-2xl text-gray-800">{post.title}</h2>
+            <p className="text-gray-600">{post.body}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ); 
+}
+8.	Save the File:
+1.	Save the changes you made to index.js.
+9.	Run the command to start the server
+$ npm run dev
+10.	In your browser search http://localhost:3000/
