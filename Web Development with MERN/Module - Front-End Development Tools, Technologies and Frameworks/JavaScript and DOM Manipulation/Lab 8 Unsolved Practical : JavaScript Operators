@@ -1,0 +1,6 @@
+Unsolved Practical: Create a JavaScript program that performs various operations on two numbers. The program should do the following:
+•	Declare two variables and assign them numerical values.
+•	Perform and log the results of the following operations to the console:
+o	Arithmetic operations: addition, subtraction, multiplication, division, and modulus.
+o	Comparison operations: check if the first number is greater than, less than, equal to, or not equal to the second number.
+o	Logical operations: check the logical AND, OR, and NOT operations between the results of the comparison operations.
