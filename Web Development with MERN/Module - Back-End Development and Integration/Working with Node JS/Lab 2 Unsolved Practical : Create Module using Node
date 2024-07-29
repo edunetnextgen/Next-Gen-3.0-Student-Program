@@ -1,0 +1,3 @@
+Unsolved Practical: Solve the Question on Node module Math Module Extension:
+1.	Add functions for multiplication and division to the math.js module.
+2.	Create a main application file (app.js) that uses these new functions and logs the results.
