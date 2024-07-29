@@ -1,0 +1,37 @@
+Solved Practical: Hands-on JS Basics, Functions, Control Statements, and Event Handling
+Objective: 
+The objective of this lab is to understand the basics of JavaScript, including variable declarations, data types, comments, and logging output to the console and document.
+Problem Statement: 
+Write an HTML and JavaScript program that demonstrates basic JavaScript syntax. The program should include variable declarations with different data types, single-line and multi-line comments, and methods to output information to the console and document.
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Basics</title>
+</head>
+<body>
+    <script>
+        // This is a single-line comment
+        /*
+         This is a
+         multi-line comment
+        */
+        // Variable declarations
+        var myVar = "TestValue"; // string
+        let myLet = 42; // number
+        const myConst = true; // Boolean
+        // Logging to the console
+        console.log("This is a string variable:", myVar);
+        console.log("This is a number variable:", myLet);
+        console.log("This is a boolean variable:", myConst);
+        // Writing to the document
+        document.write("This is a string variable: " + myVar + "<br>");
+        document.write("This is a number variable: " + myLet + "<br>");
+        document.write("This is a boolean variable: " + myConst + "<br>");
+    </script>
+</body>
+</html>
+3.	Save the file with a .html extension
+4.	Open the saved HTML file in your web browser to view the output. To see the console output, open the browser's developer tools (by pressing F12 or right-clicking on the page and selecting "Inspect" or "Inspect Element"), and navigate to the "Console" tab.
