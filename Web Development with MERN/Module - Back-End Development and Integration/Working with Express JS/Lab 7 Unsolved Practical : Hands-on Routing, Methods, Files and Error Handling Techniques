@@ -1,0 +1,6 @@
+Unsolved Practical: 
+Create a basic express JS server add some routing and HTTP method and error handling create a get method and post method with .
+•	{ id: 1, name: 'Arun' , email: `arun123@eamil.com`},
+•	{ id: 2, name: 'Abi', email: `abi456@eamil.com`},
+•	{ id: 3, name: 'Siva' , email: `siva@eamil.com`},
+•	{ id: 4, name: 'Vivek', email: `vivek098@eamil.com`}
