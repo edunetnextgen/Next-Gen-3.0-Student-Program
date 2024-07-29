@@ -1,0 +1,6 @@
+Unsolved Practical: Create a JavaScript program that determines the type of a triangle based on the lengths of its sides. The program should do the following:
+•	Declare three variables to store the lengths of the sides of the triangle.
+•	Use nested if-else statements to check if the triangle is valid (the sum of any two sides must be greater than the third side).
+•	Use if-else-if statements to determine the type of the triangle:
+o	Equilateral: All three sides are equal.
+o	Isosceles: Two sides are equal.
