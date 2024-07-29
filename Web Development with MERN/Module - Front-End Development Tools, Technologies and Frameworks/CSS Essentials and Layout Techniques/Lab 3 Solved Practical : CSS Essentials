@@ -1,0 +1,24 @@
+Solved Practical: Hands-on CSS basics, Selectors, and typesObjective: 
+The objective of this lab is to understand and implement various CSS selectors and properties to style an HTML document. This includes the use of universal, type, class, and ID selectors.
+Problem Statement: 
+Write an HTML and CSS program that demonstrates different types of css selectors and common styling properties in form of internal css.
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors and Properties Example</title>
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Type Selector */
+        body {
+            font-family: Arial, sans-serif;
+             }
