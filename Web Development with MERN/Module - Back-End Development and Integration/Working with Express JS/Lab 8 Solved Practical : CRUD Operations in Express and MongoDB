@@ -1,0 +1,194 @@
+Objective: 
+To implement a basic CRUD (Create, Read, Update, Delete) application using Express.js and MongoDB with Mongoose. You will set up an Express server, define a Mongoose schema and model, create API routes to handle CRUD operations, and verify the functionality using Postman.
+Problem Statement: 
+Create an Express.js application that connects to a MongoDB database using Mongoose. Define a user schema with fields for name, email, and password.
+Performing the practical:
+Making API calls by Postman. (You can refer practical 2 of installation of postman).
+Step 1: Create a Folder and Initialize Project
+npm init –y
+Step 2: Install Required Packages
+npm install express mongoose
+npm install --save-dev nodemon
+Step 3: Setup Mongoose Schema and Model (create a folder models in that user.model.js file) 
+const mongoose = require('mongoose');
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+   required: true,
+unique: true
+},
+  password: {
+    type: String,
+    required: true
+  }
+});
+const User = mongoose.model('User', userSchema);
+module.exports = User;
+Step 4: Setup Express Router for CRUD Operations (create a folder routes and a file called user.route.js)
+const express = require('express');
+const router = express.Router();
+const User = require('../models/user.model');
+
+// Create
+router.post('/', async (req, res) => {
+  try {
+    const user = new User(req.body);
+    await user.save();
+    res.send({ message: 'User created successfully' });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ message: 'Error creating user' });
+  }
+});
+// Read
+router.get('/', async (req, res) => {
+  try {
+    const users = await User.find().exec();
+    res.send(users);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ message: 'Error fetching users' });
+  }
+}); 
+// Read by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const user = await User.findById(id).exec();
+    if (!user) {
+      res.status(404).send({ message: 'User not found' });
+    } else {
+      res.send(user);
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ message: 'Error fetching user' });
+  }
+});
+// Update
+router.put('/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const user = await User.findByIdAndUpdate(id, req.body, { new: true }).exec();
+    if (!user) {
+      res.status(404).send({ message: 'User not found' });
+    } else {
+      res.send({ message: 'User updated successfully' });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ message: 'Error updating user' });
+  }
+});
+// Delete
+router.delete('/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const deletedUser = await User.findByIdAndDelete(id);
+    if (!deletedUser) {
+      return res.status(404).send({ message: 'User not found' });
+    }
+    res.status(200).send({ message: 'User deleted successfully' });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ message: 'Error deleting user' });
+  }
+});
+module.exports = router;
+Step 5: Setup Main Express Application(file name index.js)
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+ 
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/node-crud-app');
+ 
+// Define middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+ 
+// Define routes
+const userRoute = require('./routes/user.route');
+app.use('/api/users', userRoute);
+ 
+// Start server
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});
+Step 6: Run the Application
+nodemon index.js
+Step 7: Install Postman Download
+Step 8: Start Your Express Server
+Step 9: Test CRUD Operations
+Create a User (POST)
+•	URL: http://localhost:3000/api/users
+•	Method: POST
+•	Body: Select raw and JSON format, then enter the JSON object:
+{
+  "name":"Arjun",
+  "email":"arjun@gmail.com",
+  "password":"password1234"
+}
+Send Request: Click the Send button.
+•	Expected Response:
+ {
+               "message": "User created successfully"
+            }
+ 
+Read All Users (GET)
+•	URL: http://localhost:3000/api/users
+•	Method: GET
+•	Send Request: Click the Send button.
+Expected Response:
+[{        "_id": "random-id",
+  	  "name": "Arjun",
+  	  "email": "arjun@gmail.com",
+  	  "password": "password1234",
+   	 "__v": 0  
+}]
+ 
+
+Read User by ID (GET)
+•	URL: http://localhost:3000/api/users/{id}
+•	Method: GET
+•	Replace {random-id} with the actual _id of a user from the previous response.
+•	Send Request: Click the Send button.
+•	Expected Response:
+{  "_id": "random-id",
+              "name": "Arjun",
+               "email": "arjun@gmail.com",
+               "password": "password1234",
+               "__v": 0
+}
+ 
+Update a User (PUT)
+•	URL: http://localhost:3000/api/users/{id}
+•	Method: PUT
+•	Replace {random-id} with the actual _id of a user.
+•	Body: Select raw and JSON format, then enter the updated JSON object:
+{
+  "name": "Arjun S Updated",
+  "email": "arjuns@example.com",
+  "password": "password1234"
+}
+•	Send Request: Click the Send button.
+•	Expected Response:
+{
+  "message": "User updated successfully"
+}
+ 
+Delete a User (DELETE)
+•	URL: http://localhost:3000/api/users/{id}
+•	Method: DELETE
+•	Replace {random-id} with the actual _id of a user.
+•	Send Request: Click the Send button.
+•	Expected Response:
+{
+  "message": "User deleted successfully"
+}
+
