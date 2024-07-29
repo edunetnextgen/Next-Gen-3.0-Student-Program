@@ -1,0 +1,6 @@
+Unsolved Practical:  Create a simple JavaScript program that simulates a basic personal information form. The program should do the following:
+•	Declare variables to store your name, age, favorite color, and a list of your favorite hobbies.
+•	Use appropriate data types for each variable.
+•	Log all the variables to the console.
+•	Display a summary of the information on the webpage using document.write.
+•	Include comments to explain each part of the code
