@@ -1,0 +1,62 @@
+Objective: 
+The objective of this lab is to explore and understand various JavaScript operators, including arithmetic, comparison, logical, assignment, ternary, and bitwise operators.
+Problem Statement:
+Write an HTML and JavaScript program that demonstrates the use of different JavaScript operators. The program should include examples of arithmetic operations (addition, subtraction, multiplication, division, modulus, exponent), comparison operations (equal to, not equal to, strict equal to, strict not equal to), logical operations (AND, OR, NOT), assignment operations (+=, -=), ternary operator, and bitwise operations
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Operators</title>
+</head>
+<body>
+    <script>
+        let v1 = 10;
+        let v2 = 5;
+        console.log("v1 + v2 =", v1 + v2); // Addition
+        console.log("v1 - v2 =", v1 - v2); // Substraction
+        console.log("v1 * v2 =", v1 * v2); // Multiplication
+        console.log("v1 / v2 =", v1 / v2); // Division
+        console.log("v1 % v2 =", v1 % v2); // Modulus
+        console.log("v1 ** v2 =", v1 ** v2); // Exponent
+
+       // Comparison operators
+        let x = 10;
+        let y = 20;
+        console.log("x == y", x == y); // Equal to
+        console.log("x != y", x != y); // Not equal to
+        console.log("x === y", x === y); // Strict equal to
+        console.log("x !== y", x !== y); // Strict not equal to
+        
+        // Logical operators
+        let p = true;
+        let q = false;
+        console.log("p && q", p && q); // Logical AND
+        console.log("p || q", p || q); // Logical OR
+        console.log("!p", !p); // Logical NOT
+
+        // Assignment operators
+        let z = 10;
+        z += 5; // Equivalent to z = z + 5
+
+        // Ternary operator let age = 18; 
+        let age=19;
+        let canVote = (age >= 18) ? "Yes" : "No"; 
+        document.write("Can vote:", canVote,"<br>"); // Another example of ternary 		operator 
+
+        // Bitwise operators 
+        let a = 5; // 0101 in binary 
+        let b = 3; // 0011 in binary 
+        document.write("<h3>")
+        document.write("a & b =", a & b,"<br>"); // AND 
+        document.write("a | b =", a | b,"<br>"); // OR 
+        document.write("a ^ b =", a ^ b,"<br>"); // XOR 
+        document.write("~a =", ~a,"<br>"); // NOT 
+        document.write("a << 1 =", a << 1,"<br>"); // Left shift 
+        document.write("a >> 1 =", a >> 1,"<br>"); // Right shift 
+</script>
+</body>
+</html>
+3.	Save the file with a .html extension
+4.	Open the saved HTML file in your web browser to view the output. To see the console output, open the browser's developer tools (by pressing F12 or right-clicking on the page and selecting "Inspect" or "Inspect Element"), and navigate to the "Console" tab.
