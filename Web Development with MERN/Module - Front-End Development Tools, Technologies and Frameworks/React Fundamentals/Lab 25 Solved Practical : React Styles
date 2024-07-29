@@ -1,0 +1,84 @@
+Solved Practical: create a component and add some css and image
+Objective:  
+The objective of this lab is to understand how we can add styles to the react components
+Problem Statement: 
+Create a component and add CSS to it and image 
+Prerequisites: 
+1.	Basic understanding of the JavaScript programming language.
+2.	Basic understanding of CSS.
+Procedure: 
+Setting up the Environment: 
+1.	Ensure that Node JS is installed on your computer. 
+2.	Create React js project – npm create vite
+You can download it from the official Node JS website 
+Performing the Practical: 
+1.	Open VScode
+2.	Create a Functional component inside the src folder.
+3.	Import Functional component  sniped.
+4.	Add the following code by editing the sniped.
+
+import React from 'react';
+import './Style.css'
+import Logo from './assets/car.jpg'
+
+const StylesComponent = () => {
+  return (
+    <div className="container">
+      <img src={Logo} alt="Logo" className="logo" />
+      <h1 className="title">Welcome to My Component!</h1>
+      <p className="description">This is a sample React component.</p>
+      
+      <button className="button">Click me!</button>
+    </div>
+  );
+};
+
+export default StylesComponent;
+
+//styles.css
+.container {
+    max-width: 800px;
+    margin: 40px 500px;
+    padding: 20px;
+    background-color: #1e1c1c;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #3e8e41;
+  }
+Go to app.js file and add your component as shown:
+
+import { useState } from 'react'
+import './App.css'
+import StylesComponent from './style';function App() {
+  return (
+    <>
+   <StylesComponent/>
+    </>
+  )
+}
+export default App
