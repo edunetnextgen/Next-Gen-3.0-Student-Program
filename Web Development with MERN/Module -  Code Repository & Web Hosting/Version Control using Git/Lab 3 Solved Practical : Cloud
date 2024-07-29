@@ -1,0 +1,180 @@
+Solved Practical: Hands-on experiments of uploading static and dynamic web application
+Objective: 
+To provide practical experience in developing, deploying, and managing both static and dynamic web applications, enabling students to understand the distinctions, challenges, and best practices associated with each type of web application.
+Problem Statement: 
+In the rapidly evolving landscape of web development, developers face the challenge of efficiently creating, deploying, and managing both static and dynamic web applications. This hands-on experiment addresses the following key problems:
+1.	Lack of Practical Experience:
+•	Many developers, especially beginners, lack hands-on experience in deploying real-world web applications. This gap between theoretical knowledge and practical implementation can hinder their ability to effectively contribute to web development projects.
+2.	Distinguishing Between Static and Dynamic Applications:
+•	There's often confusion about the appropriate use cases, advantages, and limitations of static versus dynamic web applications. This misunderstanding can lead to suboptimal technology choices for specific project requirements.
+3.	Complexity of Deployment Processes:
+•	The process of taking a web application from a local development environment to a live, publicly accessible server can be daunting. This complexity is further amplified when dealing with dynamic applications that require server-side processing and database interactions.
+4.	Security Concerns:
+•	Deploying web applications, especially dynamic ones, raises significant security concerns. Developers need to understand and implement proper security measures to protect against common vulnerabilities.
+5.	Performance Optimization:
+•	Achieving optimal performance for web applications in a production environment is challenging. Developers must learn techniques to enhance load times, manage server resources efficiently, and ensure a smooth user experience.
+6.	Scalability Challenges:
+•	As web applications grow in complexity and user base, scalability becomes a critical issue. Understanding how to design and deploy applications that can handle increased loads is essential.
+7.	Version Control and Continuous Deployment:
+•	Integrating version control systems with deployment processes and implementing continuous deployment pipelines are crucial skills that many developers struggle to master.
+8.	Environment Management:
+•	Managing different environments (development, staging, production) and ensuring consistent behavior across these environments is a common challenge in web application deployment. 
+Procedure:
+•	Render is a unified cloud to build and run all your apps and websites with free TLS certificates, a global CDN, DDoS protection, private networks, and auto deploys from Git.
+•	Before we begin, make sure you have an account with Render and have your React app ready to deploy. If you haven’t created an account yet, you can sign up for free at https://render.com.
+
+ 
+
+•	You can either sign up by supplying your email and a password or using single sign on with Google or GitHub account. After signing up you’ll be redirected to your dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+render signup page
+•	This guide assumes that the reader already has some basic knowledge of react so I am not going to talk about developing react app.
+
+Step 1: Create a New Project on Render
+•	The first step is to create a new project on Render. To do this, log into your Render account and click the “New Project” button. Select “Static Sites” as your project type, choose a name for your project, and proceed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+static sites
+Step 2: Connect your Git Repository
+•	We need to connect your Git repository to Render. This will allow Render access to your repositories and automatically deploy your React app whenever you push changes to your repository. To connect your repository, click on the “Add Git Repository” button and follow the prompts to link your Git account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step 3: Configure your Build Settings
+•	Once you’ve connected your Git repository, you have granted render access to you GitHub account above, so render is going to load the list of repositories on out account for you to pick one to deploy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+•	After selecting a repo, Render will automatically detect your React app and provide you with a default build command. In most cases, this command will be sufficient for a basic React app. However, if you have specific build requirements, you can change the build command in the “Build Settings” section.
+
+                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Name — In this field you’re going to enter the name of your application or whatever name you will like to appear in the url, the url is going to be in this format; app-name.onrender.com
+
+Branch — this is a select input where you can select the branch you want to deploy, for this case I selected the main branch
+
+Root directory — This is asking for the root route of your app, you can leave it blank
+
+Build commad — For react app the build command is usually npm run buildor yarn builddepending on the package manager you used.
+
+Publish directory — The publish directory is where your static files will be served from, the directory is usually build if you created your app with create-react-app, if you use site your default publish directory is dist
+
+Step 4: Deploy your React App
+•	Click on “create static site” button below the form and watch you react app get deployed (this is going to take a few minutes depending on your network speed)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+live react app deployed on render
+
+•	If your deployment is successful, render will provide you a unique url where you can view you app live. If your deployment is not successful try using the manual deploy button to redeploy again and if it persists check the logs and troubleshoot what the error is.
+•	With your Git repository connected and your build settings configured, you can now automatically deploy your React app. To automatically deploy, simply push your latest changes to your Git repository. Render will automatically detect the changes and start building your app.
+
+Step 5: Test your Deployed App
+•	Once the build is complete, Render will automatically launch a new instance of your app. You can access your deployed app by clicking on the link provided for the build. Test your app to make sure everything is working as expected (just as it works on your localhost).
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+live react app sample
+
+•	That’s it! With just a few simple steps, you’ve successfully deployed your React app to Render Cloud Hosting. This powerful platform provides automatic scaling, automatic failover, and automatic backups, so you can be confident that your app will be available and performant for your users.
+Result:Through these hands-on experiments, students will gain practical experience in deploying both static and dynamic web applications. They will understand the fundamental differences in the development and deployment processes, as well as the ongoing management requirements for each type of application. This knowledge will enable them to make informed decisions when choosing between static and dynamic solutions for future web projects, considering factors such as performance, scalability, maintenance, and security.
