@@ -1,0 +1,4 @@
+Unsolved Practical: 
+Imagine you are tasked with extending the functionality of the existing Node.js application to handle additional custom events and callbacks.
+1.	Modify the provided code to include a new event named purchase that accepts an item name and price as parameters. Implement a callback function purchaseHandler that logs a message confirming the purchase of the item with its price.
+2.	Provide a practical scenario where you would use the purchase event and its associated callback function in a real-world application. Describe the expected output when emitting the purchase event with specific item details.
