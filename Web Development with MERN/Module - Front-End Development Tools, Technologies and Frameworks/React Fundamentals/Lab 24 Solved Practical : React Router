@@ -1,0 +1,91 @@
+Solved Practical: create three components and navigate through the components using react-router
+Objective: 
+The objective of this lab is to implement the router functionality to the web page to understand what are the components used for this.
+Problem Statement
+Create a button element and an element to display the number of counts of the button is clicked.
+Prerequisites: 
+1.	Basic understanding of the JavaScript programming language.
+2.	Basic understanding of React JS.
+Procedure: 
+Setting up the Environment: 
+1.	Ensure that Node JS is installed on your computer. 
+2.	Create React js project – npm create vite
+3.	Install React Router npm install react-router-dom
+You can download it from the official Node JS website 
+Performing the Practical: 
+1.	Open VScode
+2.	Create a Functional component inside the src folder.
+3.	Import react router in the app.js file
+4.	The Functional component sniped.
+5.	Create 3 files home.jsx, about.jsx, contact.jsx
+6.	Add the following code by editing the sniped.
+
+// Home.jsx 
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to Home Page</h1>
+    </div>
+  );
+};
+
+export default Home;
+
+// About.js
+import React from 'react';
+
+const About = () => {
+  return (
+    <div>
+      <h1>Welcome to About Page</h1>
+    </div>
+  );
+};
+
+export default About;
+
+// Contact.js
+import React from 'react';
+
+const Contact = () => {
+  return (
+    <div>
+      <h1>Welcome to Contact Page</h1>
+    </div>
+  );
+};
+
+export default Contact;
+
+7.	Go to app.js file and add your component as shown:
+
+import React from 'eact';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
+// Components
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
