@@ -1,0 +1,3 @@
+Unsolved Practical: 
+1.	Create a simple web server in Node.js that responds with "Hello, World!" for any incoming request.
+2.	Modify your server to handle POST requests and log the incoming data to the console.
