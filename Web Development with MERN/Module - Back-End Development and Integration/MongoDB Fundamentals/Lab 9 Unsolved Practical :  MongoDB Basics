@@ -1,0 +1,30 @@
+Question Set 1: MongoDB Fundamentals
+Creating and Switching Databases:
+
+How do you create a new database in MongoDB?
+How can you switch to a specific database in MongoDB?
+Collections and Documents:
+
+What is a collection in MongoDB, and how does it differ from a table in a relational database?
+How do you create a new collection in MongoDB?
+Describe the structure of a document in MongoDB. How is it similar to or different from a row in a relational database?
+Question Set 2: Basic CRUD Operations
+Inserting Documents:
+
+How do you insert a single document into a collection?
+How can you insert multiple documents at once?
+Querying Documents:
+
+How do you retrieve all documents from a collection?
+Write a query to find a document with a specific field value (e.g., name: "John Doe").
+How do you use comparison operators (e.g., $gt, $lt) in a query?
+Updating Documents:
+
+What is the difference between the $set and $unset operators?
+How do you update multiple documents that match a query condition?
+How can you increment a numerical field value in a document?
+Deleting Documents:
+
+How do you delete a single document that matches a query?
+How can you delete all documents that match a certain condition?
+What is the difference between the deleteOne and deleteMany methods?
