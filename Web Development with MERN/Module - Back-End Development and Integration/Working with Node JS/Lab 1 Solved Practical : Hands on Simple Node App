@@ -1,0 +1,36 @@
+Objective: 
+To create a simple Node.js application that demonstrates basic file reading and writing functionalities using the fs module.
+Problem Statement: 
+Develop a Node.js application that reads data from an input file, processes the data (e.g., manipulates or analyzes it), and then writes the processed data to an output file.
+Procedure:
+Setting up the Environment:
+1.	Git
+2.	Node.js and npm
+3.	Angular CLI
+4.	IDE (e.g., Visual Studio Code
+Code/Program/Procedure (with comments):
+
+Let's get started by creating the simplest Node.js application, "Hello World"
+1.	Create an empty folder called "hello", navigate into and open VS Code:
+mkdir hello 
+cd hello 
+code .
+2.	From the File Explorer toolbar, press the New File button and name the file app.js
+3.	By using the .js file extension, VS Code interprets this file as JavaScript and will evaluate the contents with the JavaScript language service. Refer to the VS Code JavaScript language topic to learn more about JavaScript support.
+4.	Create a simple string variable in app.js and send the contents of the string to the console:
+var msg = ‘Hello World’;
+Note that when you typed console. IntelliSense on the console object was automatically presented to you.Also notice that VS Code knows that msg is a string based on the initialization to 'Hello World'. If you type msg. you'll see IntelliSense showing all of the string functions available on msg. After experimenting with IntelliSense, revert any extra changes from the source code example above and save the file (Ctrl+S).
+5.	Running Hello World#
+It's simple to run app.js with Node.js. From a terminal, just type:
+node app.js
+You should see "Hello World" output to the terminal and then Node.js returns.
+Integrated Terminal#
+VS Code has an integrated terminal which you can use to run shell commands. You can run Node.js directly from there and avoid switching out of VS Code while running command-line tools.
+View > Terminal (Ctrl+` with the backtick character) will open the integrated terminal and you can run node app.js there:
+For this walkthrough, you can use either an external terminal or the VS Code integrated terminal for running the command-line tools.
+Debugging Hello World#
+As mentioned in the introduction, VS Code ships with a debugger for Node.js applications. Let's try debugging our simple Hello World application.
+To set a breakpoint in app.js, put the editor cursor on the first line and press F9 or click in the editor left gutter next to the line numbers. A red circle will appear in the gutter.
+To start debugging, select the Run View in the Activity Bar:
+
+You can now click Debug toolbar green arrow or press F5 to launch and debug "Hello World". Your breakpoint will be hit and you can view and step through the simple application. Notice that VS Code displays a different colored Status Bar to indicate it is in Debug mode and the DEBUG CONSOLE is displayed.
