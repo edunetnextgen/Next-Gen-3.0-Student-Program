@@ -1,0 +1,375 @@
+Bootstrap Utilities
+Bootstrap utility classes are meant to be applied to various elements on the page to quickly style them in some manner without the need to write custom CSS rules. In many cases, you just provide a class for your element and observe the result right away. If you’ve never employed utility classes before, fear not: in most cases they are quite simple, yet powerful. They are very convenient because you don’t need to reinvent the wheel and can concentrate on more complex tasks when creating a web application.
+There are lots of Bootstrap utility classes available that set the element’s position, tweak its display and float properties, adjust margins and paddings, color the text and background, and more. A full list of these classes can be found on the getbootstrap.com official website, and in this article I’ll cover some interesting Bootstrap utility classes that may greatly simplify your life as a developer. So, shall we start?
+Flex
+Flex is a new and much-anticipated feature of Bootstrap. It allows us to easily manage an element’s layout and alignment with a bunch of classes. Note, however, that this feature relies on the display: flex property, which may not be supported by older browsers. Interestingly, Bootstrap’s grid system now also relies on flexbox.
+Flex is quite a big topic on its own and we won’t discuss it thoroughly in this article. Let me just quickly show some results that you may achieve with this feature.
+First, it’s possible to easily control the direction of your elements (that is, whether they’ll be displayed left to right or right to left). For instance:
+<div class="d-flex flex-row-reverse">
+  <div class="p-2">Flex item 1</div>
+  <div class="p-2">Flex item 2</div>
+  <div class="p-2">Flex item 3</div>
+</div>
+This will render three elements aligned to the right, with the first element located on the right-most position:
+ 
+The order of the elements may be further controlled with the classes like order-N where N is the position’s number:
+<div class="d-flex flex-nowrap">
+  <div class="order-3 p-2">First flex item</div>
+  <div class="order-2 p-2">Second flex item</div>
+  <div class="order-1 p-2">Third flex item</div>
+</div>
+Note that this feature supports responsiveness with the classes like order-sm-1.
+The elements can be also aligned in a specific manner on the X or Y axis. For example:
+<div class="d-flex align-items-center bd-highlight mb-3">
+  <div>Flex item</div>
+</div>
+This will center the item on the Y axis:
+ 
+Float
+Float is a new utility that replaces good old “pulls”. In Bootstrap 3 you would write:
+<div class="pull-left">Pull to the left!</div>
+In Bootstrap:
+<div class="float-left">Float to the left!</div>
+A cool enhancement is that floats have become responsive too, meaning you don’t need to craft your own styles to take care of various breakpoints. For instance, the following element will float to the right only on medium (or larger) screens:
+<div class="float-md-right"></div>
+Display
+The display property has also been fully reworked in Bootstrap. It now supports all display values (from none to flex) and is fully responsive. The corresponding classes look like .d-{breakpoint}-{value}:
+•	breakpoint may have values of sm, md, lg, or xl. If this value is skipped, then xs is used by default, which effectively means the display will have the same value on all viewports.
+•	The {value} is any of those supported by the display property.
+This means that you may hide an element for chosen viewports like this:
+<div class="d-lg-none">Hide on screens wider than lg</div>
+What’s more, this utility works with print layouts too. For instance, an element may be hidden for printing:
+<div class="d-print-none">Screen Only (Hide on print only)</div>
+Sizing
+With Bootstrap  you may also control the sizing of your elements with ease. Suppose we want to display a div that occupies 25% of the parent’s width:
+<div class="w-25">Width 25%</div>
+What about the height? That’s possible too:
+<div class="h-25">Height 25%</div>
+Want to provide max-height or max-width? Utilize either mh-100 or mw-100 classes. As you see, nothing complex!
+Spacing
+The Spacing feature presents a wide range of small but handy utilities that can be used to quickly set margins and paddings for any element. Lazy developers like me will surely love this addition!
+The corresponding classes look like {property}{sides}-{size}:
+•	{property} is either m (margin) or p (padding).
+•	{sides} can have values like t (top) or l (left). If it has a blank value, the sizing will be applied to all four sides of the element.
+•	{size} is an integer from 0 to 5, or auto. This integer specifies a multiplier passed to the formula that calculates the resulting sizing ($spacer * MULTIPLIER). The default value of $spacer is 1 rem. For example 1 corresponds to the 0.25 multiplier, 2 corresponds to the 0.5 multiplier, 3 to the value of $spacer alone, 4 corresponds to the 1.5 multiplier, and finally 5 corresponds to the 3 multiplier.
+The following code means that the element will have left and right margins with the value of 1rem (x means “X axis”):
+<div class="mx-3"></div>
+  
+
+Text
+
+Text utilities were available in Bootstrap 3, but in the new version they’ve become even more powerful and convenient.
+Alignment
+As before, you can specify the alignment of text and, for example, make it centered:
+<p class="text-center">Text is centered!</p>
+But, what’s more, these utility classes are also responsive now, which means we can make this text centered only on extra-large viewports:
+<p class="text-xl-center">Text is centered only on very large screens!</p>
+Transform
+Transform is a new, small feature that may change the text to lowercase, uppercase or capitalize it. For instance:
+<p class="text-capitalize">capiTaliZed</p>
+This will display our text as “CapiTaliZed” (only the first “c” letter is uppercased):
+ 
+Font Weights
+Changing a font’s weight is now as simple as it can be:
+<p class="font-weight-bold">Bold text.</p>
+<p class="font-weight-light">Light weight text.</p>
+ 
+Colors
+You can now make your website brighter with a collection of Bootstrap utility classes for color! This feature was already available in the previous version of Bootstrap, but now it provides some new classes and options. For instance, we may now combine the color and background in the following way:
+<p class="text-danger bg-dark">Text</p>
+This will display red text on a black background:
+ 
+All in all, classes that change the text’s color itself look like text-{color}. Background can be changed with classes like bg-{color}.
+There is also support for background gradients, but it must be enabled by explicitly setting the $enable-gradients Sass variable to true.
+Borders
+This is a new and quite cool feature of Bootstrap  that allows you to quickly style borders of any element (and even each border individually!).
+For example, the following code will add a grey border for the element:
+<div class="border"></div>
+ 
+If, for some reason, you’re interested only in the top border, then write this:
+<div class="border-top"></div>
+ 
+The classes look like border-{side}, where side can have the following values:
+•	left
+•	right
+•	bottom
+•	top
+no value (in this case border will be set for all sides)
+We can be even more specific by utilizing so-called subtractive border classes. These classes look pretty much the same as the ones listed above, but must end with a -0 postfix: border-{side}-0. So, if we say:
+<div class="border-top-0"></div>
+our element will have all borders except for the top one. You can further combine these classes and, for instance, display only the left and bottom borders:
+<div class="border-top-0 border-right-0"></div>
+ 
+Color ’Em All!
+What’s more, the border color can also be changed with the help of Bootstrap utility classes. The available colors correspond to the ones listed on the colors page.
+So, for instance, we may say the following to make the element’s text appear in red:
+<div class="border border-danger"></div>
+ 
+Tweak the Radius
+Lastly, the radius of any element can be modified as well with the help of the following classes:
+•	rounded
+•	rounded-top
+•	rounded-left
+•	rounded-right
+•	rounded-bottom
+•	rounded-circle
+•	rounded-0
+rounded-circle sets border-radius of an element to 50%, whereas rounded-0 cancels all the rounding. Other classes make the corresponding border slightly rounded by setting the value to 0.25rem:
+  
+Bootstrap Columns
+This lab will guide you through building a simple webpage layout using Bootstrap's grid system and columns.
+Bootstrap Containers
+A Bootstrap container is an element with the class .container. The container is the root of the Bootstrap grid system and it is used to control the width of the layout.
+The Bootstrap container contains all the elements in a page. This means your page should have the following structure: first the body of the HTML page, inside of it you should add the container and all the other elements inside the container.
+<body>
+   <div class="container">
+    ...
+   </div>
+</body>
+
+The simple .container class sets the width of the layout depending on the width of the screen. It places the content in the middle of the page aligning it horizontally. There is equal space between the Bootstrap container and the left and the right edge of the page.
+The .container scales down in width as the screen width narrows and becomes full-width on mobile. The width of the container is defined inside the Bootstrap library for every screen size. You can see the exact sizes here.
+
+A full-width container takes 100% of the screen size regardless of the screen width. To use it you need to add the class .container-fluid.
+
+ 
+<div class="container">
+  Hello! I am in a simple container.
+</div>
+
+<div class="container-fluid">
+  Hello! I am in a full-width container.
+</div>
+To see the differences between the two types of containers, you can open the pen in your console and switch between screen sizes.
+Bootstrap Rows
+Bootstrap rows are horizontal slices of the screen. They are used only as wrappers for columns. To use them, you need the .row class.
+<div class="row">
+  ...
+</div>
+Here are the most important things you need to remember about Bootstrap rows:
+•	They are only used for containing columns. If you place other elements inside the row along with columns you will not get the expected result.
+•	They have to be placed in containers. If you don’t do this, you will get a horizontal scroll on your page. This happens because rows have negative left and right margins of 15. The container has 15px paddings so it counteracts the margins.
+•	The columns have to be children of the row. Otherwise they will not align. The rows and columns are created to work together in this strict hierarchy.
+Bootstrap Columns
+We can now get to the nice part of this tutorial, the Bootstrap columns. Columns are great! They help you divide the screen horizontally.
+If you place a single column in your row, it will take up all the width. If you add two columns, they will each take 1/2 from the width. And so it goes for any number of columns.
+ 
+<div class="container">
+  <div class="row">
+    <div class="col">
+      ...
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      ...
+    </div>
+    <div class="col">
+       ...
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      ...
+    </div>
+    <div class="col">
+       ...
+    </div>
+    <div class="col">
+      ...
+    </div>
+    <div class="col">
+       ...
+    </div>
+    <div class="col">
+       ...
+    </div>
+  </div>
+</div>
+
+Setting Sizes for Columns
+
+Using the .col class sets the width for the column dynamically. That means that depending on the number of columns in a row, the width of a column will be the width of the container divided by the number of columns.
+But there is another way to define columns. You can use classes for columns and define their size.
+
+By default, the Bootstrap grid consists of 12 columns. You can select any size from 1 to 12 for your column. If you want 3 equal columns, you can use .col-4 for each one (because 3*4 cols each = 12). Or you can set different sizes for them. Here are some examples:
+
+ 
+<div class="row">
+  <div class="col-6">
+    ...
+  </div>
+  <div class="col-6">
+     ...     
+  </div>
+</div>
+<div class="row">
+  <div class="col-5">
+    ...
+  </div>
+  <div class="col-7">
+     ...     
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    ...
+  </div>
+  <div class="col-4">
+     ...     
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    ...
+  </div>
+  <div class="col-7">
+     ...     
+  </div>
+</div>
+
+If the sum of the cols in your row doesn’t get to 12, then they don’t fill the whole row. If the sum of the columns goes beyond 12 then it will move to the next line. The first line will only display the first elements that add up to 12 or lower.
+Setting Be column breakpoints.
+A breakpoint is a Bootstrap variable that stands for a screen resolution. When you are specifying a breakpoint for a class, you are telling the class to be active only for resolutions that are at least as big as the number that the breakpoint holds.
+The simplest class that we will learn about is the .col-[breakpoint] class. When you use this class, you are defining the behaviour for the columns only when they are displayed on devices that have a resolution of at least the defined breakpoint. Up to the given breakpoint, your columns will align vertically by default. And after your breakpoint, they will align horizontally because of the class.
+Bootstrap has 4 breakpoints that you can use:
+•	.col-sm for larger mobile phones (devices with resolutions ≥ 576px);
+•	.col-md for tablets (≥768px);
+•	.col-lg for laptops (≥992px);
+•	.col-xl for desktops (≥1200px)
+
+Let’s say you want to display two columns one after another vertically on small screens and on the same line on bigger screens. You will need to specify the breakpoint where the columns go on the same line.
+In our example we will use the .col-lg breakpoint and see how the columns look on different screens. For resolutions that are lower than the given breakpoint (<992px) the columns will be displayed vertically. This means that on mobile devices and tablets, the columns will look like this:
+ 
+If you take the example above and want to display it on mobile, you may run into some problems. Displaying five columns on mobile will make the content unreadable.
+This is where one of the most powerful Bootstrap components comes into play. In order to have different layouts on different screens you won’t need to write media queries, instead you can use th evices).
+And for devices that have a resolution that is higher or equal to the breakpoint (≥992px) the columns will go on the same row. This means that on laptops and desktops you will get this result:
+ The display for resolutions >= 992px (laptops and bigger screens).
+<div class="row">
+ <div class="col-lg">
+   ...
+ </div>
+ <div class="col-lg">
+    ...   
+ </div>
+</div>
+
+If you wanted for the 2 columns to go on the same line starting with larger mobile phones you would use .col-sm, for tablets .col-md and for extra large screens .col-xl.
+Setting Sizes and Breakpoints for Columns
+You can combine the sizes and breakpoints and use a single class with the format .col-[breakpoint]-[size].
+For example, if you want three columns of different sizes to align on a row starting with the laptop resolution you need to do this:
+<div class="row">
+  <div class="col-lg-4">
+    ...
+  </div>
+  <div class="col-lg-3">
+    ...
+  </div>
+  <div class="col-lg-5">
+    ...     
+  </div>
+</div>
+
+You will get this result on resolutions <992px:
+ 
+And for screens that are ≥992px:
+ 
+But what if you want to display one column per row on small mobile resolutions, two columns per row on tablets and four on laptops or devices with higher resolutions?
+Then you add multiple classes for a single column to describe the behaviour for every resolution. Using multiple classes, you specify that the content will take six slots on tablets and three on laptops.
+<div class="row">
+  <div class="col-sm-6 col-lg-3">
+    ...
+  </div>
+  <div class="col-sm-6 col-lg-3">
+    ...
+  </div>
+  <div class="col-sm-6 col-lg-3">
+     ...     
+  </div>
+  <div class="col-sm-6 col-lg-3">
+     ...     
+  </div>
+</div>
+
+The result will show like this on tablets:
+ 
+And like this on laptops and higher resolutions:
+ 
+As an exercise, you can try and create rows with different number of columns depending on the screensize and verify the behaviour in your browser console.
+Offsetting Columns
+If you don’t want your columns to be next to each other, you can use the class .offset-[breakpoint]-[size] together with the .col-[breakpoint]-[size].
+Using this class is the same as adding an empty column before your column. Here is a simple example:
+ 
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+     ...     
+  </div>  
+  <div class="col-md-4">
+     ...     
+  </div>  
+</div>
+You can use the class on any column in the row. Here are some more examples:
+ 
+<div class="row">
+  <div class="col-md-4">
+     ...     
+  </div>  
+  <div class="col-md-4 offset-md-4">
+     ...     
+  </div>  
+</div>
+<div class="row">
+  <div class="col-md-4 offset-md-2">
+     ...    
+  </div>  
+  <div class="col-md-4 offset-md-2">
+     ...     
+  </div>  
+</div>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+     ...
+  </div>   
+</div>
+
+Nesting Columns
+This may come as a surprise, but you can add a row inside a column!
+The row in question (which will have the width of its parent column) will then be divided into 12 (smaller) columns that you can reference through the .col-* classes.
+Let’s take a look at what happens when we insert a new row inside a column:
+ 
+<div class="row">
+    <div class="col-md-8">
+        ...
+        <div class="row">
+            <div class="col-md-5">
+               ...
+            </div>
+            <div class="col-md-7">
+               ...   
+            </div>
+        </div>
+      </div>     
+    </div>
+    <div class="col-md-4">
+       ...
+    </div>
+</div>
+Bootstrap Responsive Images
+Img-fluid
+Images in Bootstrap are made responsive with .img-fluid. max-width: 100%; and height: auto; are applied to the image so that it scales with the parent element.
+ 
+<img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="img-fluid" alt="Wild Landscape" />
+Styling Images with Bootstrap
+Images are very common in modern web design. So styling images and placing it properly on the web pages is very important for improving the user experience.
+Using the Bootstrap built-in classes you can easily style images such as making the round cornered or circular images, or give them effect like thumbnails
+<img src="images/avatar.svg" class="rounded" alt="Rounded Image"> 
+<img src="images/avatar.svg" class="rounded-circle" alt="Circular Image"> 
+<img src="images/avatar.svg" class="img-thumbnail" alt="Thumbnail Image">
+
+— The output of the above example will look something like this:
+ 
+Aligning images
+Align images with the helper float classes or text alignment classes. block-level images can be centered using the .mx-auto margin utility class.
+     
+<img src="..." class="rounded float-left" alt="...">
+<img src="..." class="rounded float-right" alt="...">
