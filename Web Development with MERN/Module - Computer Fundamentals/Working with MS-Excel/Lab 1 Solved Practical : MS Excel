@@ -1,0 +1,47 @@
+Topic: MS Excel
+
+Solved Practical: Find and Replace, Spell Check, Zoom In-Out, Special Symbols, Insert Comments, Add Text Box, Undo Changes, - Freeze Panes, hiding/unhiding rows and columns.
+Solution - 
+
+Practical Word Processing Guide
+1. Find and Replace
+Finding Text:
+•	Press Ctrl + F to open the Find dialog box.
+•	Type the text you want to find in the search box.
+•	Navigate through the results using the navigation pane.
+
+Replacing Text:
+•	Press Ctrl + H to open the Replace dialog box.
+•	Type the text you want to find in the "Find what" box.
+•	Type the replacement text in the "Replace with" box.
+•	Click "Replace" to replace one instance or "Replace All" to replace all instances.
+2. Spell Check
+•	Press F7 to open the Spelling and Grammar dialog box, or go to the Review tab and click Spelling & Grammar in the Proofing group.
+•	Review each suggestion and choose to ignore, change, or add to dictionary.
+3. Zoom In-Out
+•	Go to the View tab, in the Zoom group, and click Zoom.
+•	Select the desired zoom level, or use the slider in the bottom right corner of the window to zoom in or out.
+4. Special Symbols
+•	Go to the Insert tab, in the Symbols group, and click Symbol.
+•	Select the desired symbol from the dropdown list, or click More Symbols to open the Symbol dialog box and choose from a wider range.
+5. Insert Comments
+•	Select the text or place the cursor where you want to add a comment.
+•	Go to the Review tab, in the Comments group, and click New Comment.
+•	Type your comment in the balloon that appears in the margin.
+6. Add Text Box
+•	Go to the Insert tab, in the Text group, and click Text Box.
+•	Choose a built-in text box style from the dropdown menu or draw your own by clicking Draw Text Box and dragging to create the desired size.
+7. Undo Changes
+•	Press Ctrl + Z to undo the last action.
+•	Repeat Ctrl + Z to undo multiple actions.
+•	To redo an undone action, press Ctrl + Y
+8. Freeze Panes (Excel Specific)
+•	Go to the View tab, in the Window group, and click Freeze Panes.
+•	Choose Freeze Panes to freeze rows and columns above and to the left of the active cell, Freeze Top Row to freeze the top row, or Freeze First Column to freeze the first column.
+9. Hiding/Unhiding Rows and Columns (Excel Specific)
+ Hiding Rows/Columns:
+•	Select the row(s) or column(s) you want to hide.
+•	Right-click and choose Hide from the context menu.
+ Unhiding Rows/Columns:
+•	Select the rows or columns on either side of the hidden row(s) or column(s).
+•	Right-click and choose Unhide from the context menu.
