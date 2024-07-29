@@ -1,0 +1,32 @@
+Solved Practical: Hands-on for basics of Next JS approach
+Objective: 
+The objective of this lab is to understand and implement various CSS selectors and properties to style an HTML document. This includes the use of universal, type, class, and ID selectors.
+Problem Statement: 
+Write an HTML and CSS program that demonstrates different types of css selectors and common styling properties in form of internal css.
+Procedure:
+1.	Install Node.js and npm
+2.	Create a Next.js Application:
+$  npx create-next-app@latest
+3.	This will prompt you to answer a few questions.
+ 
+            According to your requirement you can choose the options.
+4.	cd my-app (i.e., respective folder names)
+5.	Creating the Home Page with Inline CSS
+•	Open pages/index.js:
+6.	In your project directory, navigate to the pages folder and open the index.js file.
+•	Add the Welcome Messages with Inline CSS:
+7.	Replace the existing code in index.js with the following code to add the welcome messages and apply inline CSS:
+8.	In //pages/index.js
+ export default function Home() {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1 style={{ color: 'blue', fontSize: '36px' }}>Hello, this is Next.js</h1>
+      <p style={{ color: 'green', fontSize: '24px' }}>Welcome to your Next.js application</p>
+    </div>
+  );
+}
+9.	Save the File:
+1.	Save the changes you made to index.js.
+10.	Run the command to start the server
+$ npm run dev
+11.	In your browser search http://localhost:3000/
