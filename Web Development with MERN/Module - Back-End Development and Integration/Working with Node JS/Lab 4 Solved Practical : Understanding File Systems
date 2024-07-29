@@ -1,0 +1,56 @@
+Solved Practical:  Understanding File System Operations
+Objectives:
+Learn how to work with the file system using Node.js's fs module.
+Problem statement:
+Create a Node.js application to perform file system operations (read, write, update, delete) using the fs module.
+Procedure:
+Node.js provides a built-in fs module to interact with the file system. This includes reading, writing, and manipulating files.
+Steps
+1.	Reading a File:
+Create a file named file-operations.js and add the following code:
+const fs = require('fs');
+// Reading a file
+fs.readFile('example.txt', 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading file:', err);
+        return;
+    }
+    console.log('File content:', data);
+});
+2.	Writing to a File:
+Add the following code to file-operations.js to write to a file:
+// Writing to a file
+fs.writeFile('example.txt', 'Hello, Node.js!', (err) => {
+    if (err) {
+        console.error('Error writing to file:', err);
+        return;
+    }
+    console.log('File written successfully');
+});
+3.	Appending to a File:
+Add the following code to file-operations.js to append to a file:
+// Appending to a file
+fs.appendFile('example.txt', '\nAppending some text', (err) => {
+    if (err) {
+        console.error('Error appending to file:', err);
+        return;
+    }
+    console.log('Text appended successfully');
+});
+4.	Deleting a File:
+ Add the following code to file-operations.js to delete a file:
+// Deleting a file
+fs.unlink('example.txt', (err) => {
+    if (err) {
+        console.error('Error deleting file:', err);
+        return;
+    }
+    console.log('File deleted successfully');
+});
+Explanation
+•	fs.readFile reads the content of a file asynchronously.
+•	fs.writeFile writes new content to a file, creating it if it doesn't exist.
+•	fs.appendFile appends content to an existing file.
+•	fs.unlink deletes a file from the file system.
+Conclusion:
+This lab practical introduces the basics of the Node.js event loop and file system operations. Understanding these concepts is crucial for building scalable and efficient Node.js applications.
