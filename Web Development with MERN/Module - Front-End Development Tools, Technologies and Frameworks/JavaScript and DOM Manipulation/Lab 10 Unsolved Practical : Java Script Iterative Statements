@@ -1,0 +1,3 @@
+Unsolved Practical: Create a JavaScript program that generates a pattern of stars in the shape of a pyramid. Display the pyramid pattern on the webpage. The program should do the following:
+•	Use nested for loops to generate the pyramid pattern.
+•	Use a while loop to calculate and log the total number of stars used in the pyramid
