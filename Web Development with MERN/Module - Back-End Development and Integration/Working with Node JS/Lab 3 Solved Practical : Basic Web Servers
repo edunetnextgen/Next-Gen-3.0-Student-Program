@@ -1,0 +1,113 @@
+Solved Practical:  Creating Basic Web Servers with Node.js HTTP Module
+Objectives:
+•	Understand the basics of the HTTP module in Node.js.
+•	Learn how to create a basic web server.
+•	Handle HTTP requests and responses.
+Problem Statement:
+Create a basic web server in Node.js using the HTTP module to handle HTTP requests and responses.
+Procedure:
+Part 1: Setting Up a Basic Web Server
+Steps
+1.	Create a Basic Server:
+2.	Create a file named basicServer.js and write the following code:
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello World\n');
+});
+server.listen(3000, '127.0.0.1', () => {
+    console.log('Server running at http://127.0.0.1:3000/');
+});
+
+3.	Run the Server:
+>>>node basicServer.js
+4.	Access the Server:
+•	Open a web browser and navigate to http://127.0.0.1:3000/.
+•	You should see Hello World displayed in the browser.
+
+ 
+
+Part 2: Handling Different HTTP Methods
+Steps
+Create a file named methodServer.js and write the following code:
+Handle GET and POST Requests:
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    if (req.method === 'GET') {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end('Received a GET request\n');
+       } else if (req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+
+        req.on('end', () => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/plain');
+            res.end(`Received a POST request with data: ${body}\n`);
+        });
+        } 
+        else {
+        res.statusCode = 405;
+        res.end('Method Not Allowed\n');
+    }
+});
+server.listen(3000, '127.0.0.1', () => {
+    console.log('Server running at http://127.0.0.1:3000/');
+});
+2.  Test GET Request:
+•	Open a web browser and navigate to http://127.0.0.1:3000/.
+•	You should see Received a GET request displayed in the browser.
+3.  Test POST Request:
+•	Use a tool like curl or Postman to send a POST request to http://127.0.0.1:3000/ with some data.
+ 
+Part 3: Serving Static Files
+Steps
+1.	Create a Simple HTML File:
+Create a file named index.html with the following content:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Node.js Server</title>
+</head>
+<body>
+<h1>Welcome to Node.js Server</h1>
+<p>This is a simple HTML file served by Node.js.</p>
+</body>
+</html>
+2.Serve the HTML File:
+Create a file named staticFileServer.js and write the following code:
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const server = http.createServer((req, res) => {
+const filePath = path.join(__dirname, 'index.html');
+fs.readFile(filePath, (err, content) => {
+if (err) {
+res.statusCode = 500;
+res.setHeader('Content-Type', 'text/plain');
+res.end('Internal Server Error\n');
+} else 
+{
+res.statusCode = 200;
+res.setHeader('Content-Type', 'text/html');
+res.end(content);
+}
+    });
+});
+server.listen(3000, '127.0.0.1', () => {
+console.log('Server running at http://127.0.0.1:3000/');
+});
+3.Run the Server:
+>>>node staticFileServer.js
+1.	Access the Server:
+o	Open a web browser and navigate to http://127.0.0.1:3000/.
+o	You should see the content of index.html displayed in the browser.
+ 
+Conclusion
+This lab practical introduces the basics of creating web servers with the Node.js HTTP module. By handling different HTTP methods and serving static files, you can build foundational skills for more complex web applications.
+
