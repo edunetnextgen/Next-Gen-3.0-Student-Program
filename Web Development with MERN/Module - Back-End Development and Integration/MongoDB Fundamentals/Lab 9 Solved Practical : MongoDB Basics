@@ -1,0 +1,39 @@
+Solved Practical: Hands-on experiments of Installation of MongoDB Compass and Shell 
+Objective: 
+The primary objective of these hands-on experiments is to provide participants with a comprehensive, practical understanding of the MongoDB installation process, its configuration, and basic management. This experiential learning approach aims to equip learners with the skills necessary to set up and manage MongoDB in various environments, preparing them for real-world database management scenarios.
+Problem Statement: 
+•	Installation Requirements: Install MongoDB on Windows, macOS, and Linux operating systems based on best practices and compatibility with our existing technology stack.
+•	Configuration: Configure MongoDB settings such as data directory, log directory, port number, and security settings (authentication and authorization).
+Procedure:
+•	Installing and setting up MongoDB involves several steps. Here’s a detailed guide for installing MongoDB on a typical system, specifically focusing on installation for Windows, macOS, and Linux.
+Installing MongoDB on Windows
+1.	Download MongoDB:
+•	Visit the MongoDB Download Center and choose the MSI package for Windows.
+•	Link https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.11-signed.msi
+2.	Run the Installer:
+•	Double-click the downloaded MSI file.
+•	Follow the setup wizard. Choose "Complete" for a full installation.
+
+ 
+3.	Set Up MongoDB as a Windows Service:
+•	During the installation, you’ll be prompted to choose if you want to install MongoDB as a service. Check this option.
+•	Choose "Run the service as a Network Service user".
+4.	Specify Data and Log File Paths:
+•	By default, MongoDB stores data in C:\Program Files\MongoDB\Server\<version>\data and logs in C:\Program Files\MongoDB\Server\<version>\log.
+•	You can change these paths during the setup process or later in the mongod.cfg configuration file.
+ 
+5.	Finish Installation:
+•	Complete the installation process and exit the setup wizard.
+6.	Start MongoDB:
+•	MongoDB should start automatically if you installed it as a service. Otherwise, you can start it manually using:  
+                 
+                 net start MongoDB
+ 
+6.	Open MongoDB Compass from the start menu
+7.	To open the embedded mongosh, click _MONGOSH at the bottom of the MongoDB Compass window. If MongoDB Shell is not available you can follow the steps: 
+Goto Edit menu -> Settings-> Enable MongoDB Shell
+
+ 
+
+Result:
+The installation and setup of MongoDB have been completed across our designated environments—Windows, macOS, and Linux—following a structured approach to ensure consistency and reliability in our database infrastructure.
