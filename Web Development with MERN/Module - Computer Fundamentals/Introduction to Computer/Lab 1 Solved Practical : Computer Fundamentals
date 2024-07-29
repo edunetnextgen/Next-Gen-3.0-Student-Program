@@ -1,0 +1,27 @@
+Solved Practical: Searching Files using File Explorer, Installing Application to computer, Create Shortcut of that application to desktop.
+
+Solution - 
+Using File Explorer:
+•	Click on the Start menu in the bottom-left corner of your screen.
+•	Select File Explorer from the list of options.
+•	In the File Explorer window, locate the search box at the top right corner.
+•	Type in your search query, such as "report.docx" or keywords related to the file you are looking for.
+•	Press Enter to start the search.
+File Explorer will display all files and folders that match your search criteria, allowing you to easily locate your desired file.
+
+Application Installation
+Downloading and installing an application:
+Example: Installing Google Chrome
+•	Open your web browser and navigate to the Google Chrome website.
+•	Look for the Download Chrome button and click on it.
+•	Once the download is complete, locate the downloaded file (usually named something like "ChromeSetup.exe") and double-click to run it.
+•	Follow the on-screen instructions in the installation wizard to proceed with the installation.
+•	During the installation process, you may be prompted to choose installation options, such as creating a desktop shortcut for Google Chrome
+
+Creating a Shortcut:
+Example: Creating a shortcut for Microsoft Word
+•	Click on the Start menu in the bottom-left corner of your screen.
+•	Find and right-click on Microsoft Word in the list of programs.
+•	Select More > Open file location to navigate to where Microsoft Word is installed.
+•	Right-click on the Microsoft Word application icon, then choose Send to > Desktop (create shortcut).
+•	A shortcut icon for Microsoft Word will appear on your desktop, allowing you to quickly access it whenever needed.
