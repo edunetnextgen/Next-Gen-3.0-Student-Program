@@ -1,0 +1,41 @@
+Objective:  
+The objective of this lab is to implement the express js project This includes how to install express and how to run an express file.
+Problem Statement:  
+Create a basic express js server and run a simple text
+Performing the Practical: 
+1.	Creat a folder
+2.	Open the folder on VScode
+3.	Use the following command to create a package.json file for your application.
+npm init
+
+4.	After performing the above comment fully finish You will get package.json file 
+then install express js 
+npm install express
+5.	Then create the js file as per the entry point
+Add the following code:
+//index.js
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+6.	Run the code in the terminal, add the following command
+node index.js
+7.	See the terminal you will find a text
+Example app listening on port 3000
+8.	Check the browser 
+http://localhost:3000/
+9.	Now come back to the code editer terminate the command by clicking ctrl + c
+10.	In the new line put the following command (running the code using watch mode)
+node --watch index.js
+11.	Now make some changes and see the output it will automatically run the code because we used the above command or else you can download the nodemon and run the file using this comment.
+To install nodemone
+npm i nodemon –g     
+   To run the code 
+	nodemon index.js
