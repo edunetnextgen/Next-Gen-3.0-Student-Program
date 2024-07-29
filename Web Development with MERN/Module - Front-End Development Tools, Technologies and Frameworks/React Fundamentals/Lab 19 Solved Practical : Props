@@ -1,0 +1,33 @@
+Solved Practical: create a Functional component and pass props 
+Objective:
+The objective of this lab is to implement the Functional component in a React project This includes creating of the React project and Functional component and understanding how components interact each other how data is passed from child component to the parent component.
+Problem Statement: 
+Create a React JS project using the Functional component and pass a props value
+Performing the Practical: 
+1.	Open VScode
+2.	Create React js project – npm create vite
+3.	Create a Functional component inside the src folder.
+4.	Import react and the Functional component sniped.
+5.	Add the following code by editing the sniped.
+import React from 'react'
+const Propsin_react = (props) => {
+  return (
+    <div>
+      <h1>Hello, i am {props.name}</h1>
+    </div>
+  )
+}
+export default Propsin_react
+6.	Go to app.js file and add your component as shown:
+import { useState } from 'react'
+import Propsin_react from './components/Propsin_react'
+import './App.css'
+
+function App() {
+  return (
+    <>
+  <Propsin_react name='props'/>
+    </>
+  )
+}
+export default App
