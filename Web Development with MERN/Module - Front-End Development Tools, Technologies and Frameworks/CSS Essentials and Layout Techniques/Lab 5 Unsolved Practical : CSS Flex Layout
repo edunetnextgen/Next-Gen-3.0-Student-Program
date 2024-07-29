@@ -1,0 +1,5 @@
+Unsolved Practical: Create an HTML document that includes a navigation bar with several links. Use CSS Flexbox to style these links as follows:
+•	Align the links horizontally within the navigation bar.
+•	Apply equal spacing between the links.
+•	Center the links vertically within the navigation bar.
+•	Add padding and a background color to each link when hovered over.
