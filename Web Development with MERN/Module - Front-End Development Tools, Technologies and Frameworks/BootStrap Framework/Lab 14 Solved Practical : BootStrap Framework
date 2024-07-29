@@ -1,0 +1,213 @@
+Topic – Bootstrap Framework
+Solved Practical - Hands-on Basic Bootstrap, Container, and components
+Objective: 
+The objective of this lab is to implement Basic Bootstrap, Container, and components 
+Problem Statement: 
+This chapter will explain how to download and setup Bootstrap. It will also discuss the Bootstrap file structure and demonstrate its usage with an example.
+Getting Started with Bootstrap
+In this tutorial you will learn how easy it is to create a web page using Bootstrap. But before beginning, be sure to have a code editor and some working knowledge of HTML and CSS.
+ 
+Well, let's get started creating our first Bootstrap powered web page.
+1. Installation
+To start using Bootstrap, you have a few options:
+Download: You can download the Bootstrap CSS and JavaScript files from the official website and include them in your project manually.
+CDN: Use a Content Delivery Network (CDN) to include Bootstrap directly in your HTML files. This is the quickest way to get started. Add the following code to the <head> section of your HTML document:
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+2. Basic Template
+Bootstrap uses a 12-column grid system, making it easy to create responsive layouts. Here’s a simple HTML template structure to get you started:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bootstrap Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Your content goes here -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+3. Bootstrap Components
+Bootstrap provides a wide range of components, including buttons, forms, navigation bars, and more. You can easily use these components by adding Bootstrap classes to your HTML elements. For example, to create a button, use the following code:
+<button class="btn btn-primary">Click Me</button>
+4. Responsive Design
+Bootstrap is designed to ensure your website looks great on various screen sizes and devices. This responsiveness is achieved through Bootstrap’s grid system and responsive classes. For instance, you can use classes like col-sm-6 to define column widths for different screen sizes.
+Bootstrap Containers
+
+Creating Containers with Bootstrap
+
+Containers are the most basic layout element in Bootstrap and are required when using the grid system. Containers are basically used to wrap content with some padding. They are also used to align the content horizontally center on the page in case of fixed width layout.
+Bootstrap provides three different types containers:
+•	.container, which has a max-width at each responsive breakpoint.
+•	.container-fluid, which has 100% width at all breakpoints.
+•	.container-{breakpoint}, which has 100% width until the specified breakpoint.
+
+The table below illustrates how each container's max-width changes across each breakpoint.
+For example, when using the .container class the actual width of the container will be 100% if the viewport width is <576px, 540px if the viewport width is ≥576px but <768px, 720px if the viewport width is ≥768px but <992px, 960px if the viewport width is ≥992px but <1200px, 1140px if the viewport width is ≥1200px but <1400px, and 1320px if the viewport width is ≥1400px.
+Similarly, when you use the .container-lg class the actual width of the container will be 100% until the viewport width is <992px, 960px if the viewport width is ≥992px but <1200px, 1140px if the viewport width ≥1200px but <1400px, and 1320px if the viewport width is ≥1400px.
+
+Creating Responsive Fixed-width Containers
+You can simply use the .container class to create a responsive, fixed-width container. The width of the container will change at different breakpoints or screen sizes, as shown above.
+ <div class="container">
+   <h1>This is a heading</h1>
+   <p>This is a paragraph of text.</p>
+ </div>
+Creating Fluid Containers
+You can use the .container-fluid class to create a full width container. The width of the fluid container will always be 100% irrespective of the devices or screen sizes.
+<div class="container-fluid">
+  <h1>This is a heading</h1>
+  <p>This is a paragraph of text.</p>
+</div>
+Specify Responsive Breakpoints for Containers
+Since Bootstrap, you can also create containers that is 100% wide until the specified breakpoint is reached, after which max-width for each of the higher breakpoints will be applied.
+For example, .container-xl will be 100% wide until the xl breakpoint is reached (i.e., viewport width ≥ 1200px), after which max-width for xl breakpoint is applied, which is 1140px.
+<div class="container-sm">100% wide until screen size less than 576px</div> <div class="container-md">100% wide until screen size less than 768px</div> <div class="container-lg">100% wide until screen size less than 992px</div> <div class="container-xl">100% wide until screen size less than 1200px</div>
+Adding Background and Borders to Containers
+By default, container doesn't have any background-color or border. But if you need you can apply your own styles, or simply use the Bootstrap background-color and border utility classes to add background-color or border on them, as shown in the following example.
+<!-- Container with dark background and white text color --> 
+<div class="container bg-dark text-white">
+ <h1>This is a heading</h1>
+ <p>This is a paragraph of text.</p>
+ </div> 
+<!-- Container with light background --> 
+<div class="container bg-light">
+ <h1>This is a heading</h1>
+ <p>This is a paragraph of text.</p>
+ </div>
+ <!-- Container with border -->
+ <div class="container border"> 
+<h1>This is a heading</h1>
+ <p>This is a paragraph of text.</p> 
+</div>
+Applying Paddings and Margins to Containers
+By default, containers have padding of 12px on the left and right sides, and no padding on the top and bottom sides. To apply extra padding and margins you can use the spacing utility classes.
+<!-- Container with border, extra paddings and margins -->
+ <div class="container border py-3 my-3">
+ <h1>This is a heading</h1> 
+ <p>This is a paragraph of text.</p>
+ </div>
+
+Bootstrap Components
+Creating Buttons with Bootstrap
+
+Buttons are the integral part of a website and application. They are used for various purposes like, submit or reset an HTML form, performing interactive actions such as showing or hiding something on a web page on click of the button, redirecting user to another page, and so on. Bootstrap provides a quick and easy way to create and customize the buttons.
+Bootstrap Button Styles
+Different classes are available in Bootstrap for styling the buttons as well as to indicate the different states or semantic. Button styles can be applied to any element. However, it is applied normally to the <a>, <input>, and <button> elements for the best rendering.
+The following example will show you how to create different styles of buttons in Bootstrap:
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button> 
+<button type="button" class="btn btn-success">Success</button> 
+<button type="button" class="btn btn-danger">Danger</button> 
+<button type="button" class="btn btn-warning">Warning</button> 
+<button type="button" class="btn btn-info">Info</button>
+ <button type="button" class="btn btn-dark">Dark</button>
+ <button type="button" class="btn btn-light">Light</button>
+ <button type="button" class="btn btn-link">Link</button>
+
+The output of the above example will look something like this:
+ 
+Bootstrap Cards
+Using the Bootstrap Cards
+Bootstrap card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. Card replaces panel, well, and thumbnail components in old Bootstrap 3 version.
+In the following sections, you will see what you can do with the card component.
+Creating a Basic Card
+The card markup is pretty straight forward. The outer wrapper require the base class .card, whereas content can be placed inside the .card-body element. The following example will show you how to create a card with a picture, mixed with some text content and a button.
+<div class="card" style="width: 300px;"> 
+<img src="images/sample.svg" class="card-img-top" alt="...">
+ <div class="card-body text-center"> 
+<h5 class="card-title">Hari</h5>
+ <p class="card-text">Hari is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p> 
+<a href="#" class="btn btn-primary">View Profile</a>
+ </div>
+ </div>
+
+— The output of the above example will look something like this:
+ 
+Creating Navbar with Bootstrap
+You can use the Bootstrap navbar component to create responsive navigation header for your website or application. These responsive navbar will be collapsed on devices having small viewports like mobile phones but expand when user click the toggle button. However, it will be horizontal as normal on the medium and large devices such as laptop or desktop.
+You can also create different variations of the navbar such as navbars with dropdown menus and search boxes as well as fixed positioned navbar with much less effort. The following example will show you how to create a simple static navbar with navigation links.
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <div class="container-fluid">
+ <a href="#" class="navbar-brand">Brand</a>
+ <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+   <div class="collapse navbar-collapse" id="navbarCollapse"> 
+    <div class="navbar-nav"> 
+<a href="#" class="nav-item nav-link active">Home</a>
+<a href="#" class="nav-item nav-link">Profile</a>
+ <a href="#" class="nav-item nav-link">Messages</a>
+ <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>
+     </div>
+ <div class="navbar-nav ms-auto"> 
+<a href="#" class="nav-item nav-link">Login</a>
+    </div>
+   </div>
+  </div>
+ </nav>
+
+— The output of the above example will look something like this:
+
+ 
+Bootstrap Accordion
+Creating Accordion Widget with Bootstrap
+Accordion is a series of panels stacked on the top of each other.
+Accordion menus and widgets are widely used in the web applications to manage the large amount of content and navigation lists in a small amount area. With Bootstrap collapse plugin you can either create accordions or show and hide content without writing any JavaScript code.
+Let's see how to build a simple accordion widget using the Bootstrap collapsible plugin.
+<div class="accordion" id="myAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button collapsed" 
+data-bs- toggle="collapse" data-bs-target="#collapseOne">1. 
+What is HTML?</button>		
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" 
+data-bs-parent="#myAccordion">
+            <div class="card-body">
+                <p>HTML stands for HyperText Markup Language. 
+HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" 
+data-bs-target="#collapseTwo">2. What is Bootstrap?</button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse show" 
+data-bs-parent="#myAccordion">
+            <div class="card-body">
+                <p>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">3. What is CSS?</button>                     
+        </h2>
+<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+            <div class="card-body">
+ <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+— The output of the above example will look something like this:
+
+ 
+Bootstrap Accordion with Plus Minus Icons
+You can also use plus minus icons in the Bootstrap accordion widget (in place of chevron down and up icons) with a few lines of custom CSS code. Let's try out the following example:
+<style>
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    transform: scale(0.75) !important;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+</style>
+
+— The output of the above example will look something like this:
