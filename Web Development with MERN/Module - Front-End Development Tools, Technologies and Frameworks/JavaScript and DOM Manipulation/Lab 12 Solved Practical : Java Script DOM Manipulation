@@ -1,0 +1,57 @@
+Objective: 
+To learn how to manipulate the Document Object Model (DOM) using JavaScript, including changing text content, modifying HTML, applying styles, and dynamically adding new elements.
+Problem Statement: 
+Write an HTML and JavaScript program that demonstrates basic DOM manipulation techniques. The program should include:
+•	A function to change the text content and style of an existing element when a button is clicked.
+•	A function to dynamically add a new element to the page when another button is clicked.
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript DOM Manipulation</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p id="message">Click the button to change this message.</p>
+    </div>
+
+    <button onclick="changeMessage()">Change Message</button>
+    <button onclick="addNewElement()">Add New Element</button>
+
+    <script>
+        // Function to change message content and style
+        function changeMessage() {
+            let messageElement = document.getElementById("message");
+
+            // Change text content
+            messageElement.textContent = "Message changed using textContent.";
+            // Change inner HTML
+            messageElement.innerHTML += "<br>Added using innerHTML.";
+            // Apply styles
+            messageElement.style.color = "blue";
+            messageElement.style.fontSize = "1.2em";
+        }
+
+        // Function to add a new element
+
+        function addNewElement() {
+            let contentDiv = document.querySelector("#content");
+            let newElement = document.createElement("p");
+            newElement.textContent = "This is a new paragraph added dynamically.";
+            newElement.classList.add("highlight"); // Adding a CSS class
+            contentDiv.appendChild(newElement);
+        }
+    </script>
+</body>
+</html>
+
+3.	Save the file with a .html extension
+4.	Open the saved HTML file in your web browser to view the output. 
