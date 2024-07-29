@@ -1,0 +1,28 @@
+Objective:  
+The objective of this lab is to implement the react project This includes creating the React project from scratch.to understand the file structure and the basic of the codes
+Problem Statement:  Create a react project and do some JS operation
+Performing the Practical: 
+1.	Open VScode
+2.	Install or create react js project
+3.	npm create vite
+4.	Edit the App.js file add the following code:
+
+import React from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+function App() {
+const a=5;
+const b=9;
+  return (
+    <>  
+    <h1>Hello world</h1> 
+    <p>{5+7}</p>
+    <p>{a+b}</p>
+    </>
+  )
+}
+export default App
+
+Run the project
+1.	 npm run dev
