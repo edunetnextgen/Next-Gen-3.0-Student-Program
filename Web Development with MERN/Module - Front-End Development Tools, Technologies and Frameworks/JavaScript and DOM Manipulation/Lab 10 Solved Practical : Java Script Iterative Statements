@@ -1,0 +1,56 @@
+Objective: 
+To understand and implement various types of JavaScript loops, including for, while, do-while, and for-in loops.
+Problem Statement: 
+Write a JavaScript program that demonstrates the use of JavaScript loops. The program should include:
+•	A for loop that iterates five times and logs the current index to the console.
+•	A while loop that iterates until a condition is met and logs the current index to the console.
+•	A do-while loop that iterates at least once and continues until a condition is met , writing the current index to the document.
+•	A for-in loop that iterates over the properties of an object (person) and writes each key-value pair to the document.
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Loops</title>
+</head>
+<body>
+    <script>
+        // for loop
+        console.log("For Loop:");
+        for (let i = 0; i < 5; i++) {
+            console.log("i =", i);
+        }
+
+        // while loop
+        console.log("While Loop:");
+        let j = 0;
+        while (j < 5) {
+            console.log("j =", j);
+            j++;
+        }
+
+        // do-while loop
+        document.write("Do-While Loop:","<br>");
+        let k = 0;
+        do {
+            document.write("k =", k,"<br>");
+            k++;
+        } while (k < 5);
+
+        // for-in loop
+        document.write("<br>For-In Loop:","<br>");
+        let person = {
+            name: "Alice",
+            age: 30,
+            city: "New York"
+        };
+
+        for (let key in person) {
+            document.write(key + ":", person[key],"<br>");
+        }
+    </script>
+</body>
+</html>
+3.	Save the file with a .html extension
+4.	Open the saved HTML file in your web browser to view the output. To see the console output, open the browser's developer tools (by pressing F12 or right-clicking on the page and selecting "Inspect" or "Inspect Element"), and navigate to the "Console" tab.
