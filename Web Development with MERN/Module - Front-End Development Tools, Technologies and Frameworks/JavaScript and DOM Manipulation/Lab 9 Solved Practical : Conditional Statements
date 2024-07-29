@@ -1,0 +1,72 @@
+Objective: 
+The objective of this lab is to learn and implement JavaScript conditional statements, including the if-else, if-else-if, and switch statements.
+Problem Statement: 
+Write a JavaScript program that demonstrates the use of JavaScript conditional statements. The program should include:
+•	An if-else statement to determine if a person is a minor or an adult based on their age.
+•	An if-else-if ladder to assign a grade based on a given score.
+•	A switch statement to display the day of the week based on a numeric day value (1 for Monday, 2 for Tuesday, etc.).
+Procedure:
+1.	Open your text editor or IDE.
+2.	Create a new HTML file and add the following code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditional Statements</title>
+</head>
+<body>
+    <script>
+        // if-else statement
+        let age = 20;
+        if (age < 18) {
+            console.log("You are a minor.");
+        } else {
+            console.log("You are an adult.");
+        }
+
+        // if-else-if statement
+        let score = 85;
+        if (score >= 90) {
+            console.log("Grade: A");
+        } else if (score >= 80) {
+            console.log("Grade: B");
+        } else if (score >= 70) {
+            console.log("Grade: C");
+        } else if (score >= 60) {
+            console.log("Grade: D");
+        } else {
+            console.log("Grade: F");
+        }
+        // switch statement
+        let day = 3;
+        switch (day) {
+            case 1:
+                console.log("Today is Monday.");
+                break;
+            case 2:
+                console.log("Today is Tuesday.");
+                break;
+            case 3:
+                console.log("Today is Wednesday.");
+                break;
+            case 4:
+                console.log("Today is Thursday.");
+                break;
+            case 5:
+                console.log("Today is Friday.");
+                break;
+            case 6:
+                console.log("Today is Saturday.");
+                break;
+            case 7:
+                console.log("Today is Sunday.");
+                break;
+            default:
+                console.log("Invalid day.");
+                break;
+        }
+    </script>
+</body>
+</html>
+
+3.	Save the file with a .html extension
+4.	Open the saved HTML file in your web browser to view the output. To see the console output, open the browser's developer tools (by pressing F12 or right-clicking on the page and selecting "Inspect" or "Inspect Element"), and navigate to the "Console" tab.
