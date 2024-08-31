@@ -1,51 +1,111 @@
-  Topic - CSS Flex Layout
-Solved Practical: Hands-on Grids & Flex
-Objective: 
-The objective of this lab is to understand and implement CSS Flexbox to create flexible and responsive layouts. This includes establishing a flex container, aligning flex items horizontally and vertically, and utilizing individual item alignment within the flex container.
-Problem Statement: 
-Write an HTML and CSS program that demonstrates the use of CSS Flexbox properties. The program should include a container with multiple flex items, showcasing how to distribute space, align items within the container, and individually align a specific item.
-Procedure:
-1.	Open your text editor or IDE.
-2.	Create a new HTML file and add the following code:
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Box Model and Positioning Example</title>
+    <title>Flex Layout Example</title>
     <style>
-        /* Box Model Example */
-        .box {
-            width: 200px; /* Content width */
-            height: 100px; /* Content height */
-            padding: 20px; /* Padding */
-            border: 5px solid red; /* Border */
-            margin: 30px; /* Margin */
-            background-color: lightcoral; /* Background color for visibility */
-            position: relative; /* Relative positioning */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        /* Positioning Example */
-        .positioned-element {
-            width: 100px;
-            height: 50px;
-            background-color: lightgreen;
-            padding: 10px;
-            border: 2px solid #000;
-            position: absolute; /* Absolute positioning */
-            top: 40px; /* 20px from the top of the relatively positioned .box */
-            left: 20px; /* 20px from the left of the relatively positioned .box */
+        /* Flex Container for the Page */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
+
+        /* Header */
+        .header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main Content Area */
+        .content {
+            display: flex;
+            flex: 1;
+            background-color: #ecf0f1;
+            padding: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #e74c3c;
+            color: white;
+            width: 200px;
+            padding: 20px;
+        }
+
+        /* Main Content Section */
+        .main {
+            flex: 1;
+            background-color: #f1c40f;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
     </style>
 </head>
 <body>
-    <div class="box">
-        This is a box model example.
-        <div class="positioned-element">
-            Positioned Element
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Flex Layout Example</h1>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                Sidebar Content
+            </div>
+
+            <!-- Main Section -->
+            <div class="main">
+                Main Content Area
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2024 Flex Layout Example
         </div>
     </div>
+
 </body>
 </html>
-3.	Save the file with a .html extension 
-4.	Open the saved HTML file in your web browser to view the styled document.
