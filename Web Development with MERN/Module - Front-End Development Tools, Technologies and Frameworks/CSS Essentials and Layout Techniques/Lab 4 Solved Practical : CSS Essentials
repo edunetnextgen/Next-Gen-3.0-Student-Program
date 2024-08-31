@@ -1,29 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Properties Example</title>
+    <style>
+        /* Box styling for demonstration */
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       
-        <title>CSS Box Model</title>
-        <style>
-            div {
-    width: 400px;
-    height: 80px;
-    border: 10px solid black;
-    padding: 15px;
-    background-color: greenyellow;
-    /* clips the background color to content only */
-    background-clip: content-box;
-}
-        </style>
-    </head>
+        /* Static Position (default) */
+        .static-box {
+            position: static;
+        }
 
-    <body>
-        <div>
-            The CSS box model is a way of describing the layout of an HTML
-            element.
+        /* Relative Position */
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Absolute Position */
+        .absolute-box {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        /* Fixed Position */
+        .fixed-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Sticky Position */
+        .sticky-box {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 0;
+            background-color: #e74c3c;
+        }
+
+        /* Container to hold the sticky box */
+        .container {
+            height: 500px;
+            overflow-y: scroll;
+            border: 2px solid #000;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box static-box">
+        Static Box
+    </div>
+
+    <div class="box relative-box">
+        Relative Box
+    </div>
+
+    <div class="box absolute-box">
+        Absolute Box
+    </div>
+
+    <div class="box fixed-box">
+        Fixed Box
+    </div>
+
+    <div class="container">
+        <div class="box sticky-box">
+            Sticky Box (Scroll Down)
         </div>
-    </body>
+        <p>Scroll down to see the sticky box stay at the top of its container while scrolling.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.</p>
+        <p>Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.</p>
+        <p>Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.</p>
+        <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+    </div>
 
+</body>
 </html>
